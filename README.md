@@ -1,4 +1,4 @@
-## My personal website
+# My personal website
 
 Visit it [here!](https://sarosijbose.github.io/)
 
