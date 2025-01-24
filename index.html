@@ -52,8 +52,8 @@
               </head>
               
 
-              <p>I am a second year Ph.D. student at <strong>University of California, Riverside</strong> 
-                co-advised by Professors <a href="https://vcg.ece.ucr.edu/amit">Amit K. Roy Chowdhury</a> and <a href="https://sites.google.com/view/arcs-lab/">Konstantinos Karydis</a>. 
+              <p>I am a Ph.D. student at <strong>University of California, Riverside</strong> 
+                advised by <a href="https://vcg.ece.ucr.edu/amit">Dr. Amit K. Roy Chowdhury</a> and <a href="https://sites.google.com/view/arcs-lab/">Dr. Konstantinos Karydis</a>. 
                 My research revolves around how autonomous systems perceive this world and building pipelines that can enable them to understand scenes using minimal supervision just as humans do.
               </p>
               
@@ -139,6 +139,60 @@
             </tr>
           </tbody>
         </table>
+
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <tr>
+          <td style="padding:20px;width:100%;vertical-align:middle">
+            <heading><b>2025</b></heading>
+            </td>
+          </tr>
+        </tbody></table>
+
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tbody>
+            <tr onmouseout="clipnerf_stop()" onmouseover="clipnerf_start()">
+              <td style="padding:20px;width:25%;vertical-align:middle">
+                <div class="one">
+                  <img src='images/soccerkdnet.png' width="160">
+                </div>
+                <script type="text/javascript">
+                  function clipnerf_start() {
+                    document.getElementById('clipnerf_image').style.opacity = "1";
+                  }
+
+                  function clipnerf_stop() {
+                    document.getElementById('clipnerf_image').style.opacity = "0";
+                  }
+                  clipnerf_stop()
+                </script>
+              </td>
+              <td style="padding:20px;width:75%;vertical-align:middle">
+                  <papertitle>Unsupervised Domain Adaptation for Occlusion Resilient Human Pose Estimation</papertitle>
+                <br>
+                 Arindam Dutta*, <strong>Sarosij Bose*</strong>, Saketh Bachu, Calvin Khang-Ta, Konstantinos Karydis, Amit K. Roy Chowdhury
+                <br>
+                <em>arxiv pre-print, 2025</em>
+                <br>
+                <a href="https://arxiv.org/abs/2501.02773">arxiv</a> /        
+                <a href="">slides</a> /
+                <a href="">code</a> /
+                <!-- <a href="https://bit.ly/soccerdb1">dataset</a> -->
+              
+                <p></p>
+                <p> Occlusions are a significant challenge to human pose estimation algorithms, often resulting in inaccurate and anatomically implausible poses. 
+                  Although current occlusion-robust human pose estimation algorithms exhibit impressive performance on existing datasets, their success is largely attributed to supervised training and the availability of additional information, such as multiple views or temporal continuity. 
+                  Furthermore, these algorithms typically suffer from performance degradation under distribution shifts. While existing domain adaptive human pose estimation 
+                  algorithms address this bottleneck, they tend to perform suboptimally when the target domain images are occluded, a common occurrence in real-life scenarios. 
+                  To address these challenges, we propose OR-POSE: Unsupervised Domain Adaptation for Occlusion Resilient Human POSE Estimation. OR-POSE is an innovative unsupervised 
+                  domain adaptation algorithm which effectively mitigates domain shifts and overcomes occlusion challenges by employing the mean teacher framework for iterative 
+                  pseudo-label refinement. Additionally, OR-POSE reinforces realistic pose prediction by leveraging a learned human pose prior which incorporates the anatomical 
+                  constraints of humans in the adaptation process. Lastly, OR-POSE avoids overfitting to inaccurate pseudo labels generated from heavily occluded images by 
+                  employing a novel visibility-based curriculum learning approach. This enables the model to gradually transition from training samples with relatively less 
+                  occlusion to more challenging, heavily occluded samples. Extensive experiments show that OR-POSE outperforms existing analogous state-of-the-art 
+                  algorithms by &tilde; 7% on challenging occluded human pose estimation datasets.</p>
+              </td>
+            </tr>
+          </tbody></table>
 
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
           <tr>
