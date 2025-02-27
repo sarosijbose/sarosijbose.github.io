@@ -110,6 +110,7 @@
           <heading>News</heading>
           <div style="width:100%; height:150px; overflow-y:scroll;">
             <p>
+              <strong>Feb '25 : </strong>Paper accepted to <strong>CVPR 2025!</strong><br>
               <strong>Nov '24 : </strong>Serving as a reviewer for <strong>ICRA 2025</strong><br>
               <strong>Oct '24 : </strong>Serving as a reviewer for <strong>ICLR 2025</strong><br>
               <strong>Dec '23 : </strong>Started the <strong>CRIS Colloquium</strong>, check it out <a href="hhttps://live-ucr-crisbcoe.pantheonsite.io/">here</a><br>
@@ -147,6 +148,48 @@
             </td>
           </tr>
         </tbody></table>
+
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tbody>
+            <tr onmouseout="clipnerf_stop()" onmouseover="clipnerf_start()">
+              <td style="padding:20px;width:25%;vertical-align:middle">
+                <div class="one">
+                  <img src='images/Con-SGG.png' width="160">
+                </div>
+                <script type="text/javascript">
+                  function clipnerf_start() {
+                    document.getElementById('clipnerf_image').style.opacity = "1";
+                  }
+
+                  function clipnerf_stop() {
+                    document.getElementById('clipnerf_image').style.opacity = "0";
+                  }
+                  clipnerf_stop()
+                </script>
+              </td>
+              <td style="padding:20px;width:75%;vertical-align:middle">
+                  <papertitle>Conformal Prediction and MLLM aided Uncertainity Quantification in Scene Graph Generation</papertitle>
+                <br>
+                 Sayak Nag, Udita Ghosh, Calvin-Khang Ta, <strong>Sarosij Bose*</strong>, Jiachen Li, Amit K. Roy Chowdhury
+                <br>
+                <em>IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2025</em>
+                <br>
+                <a href="">arxiv</a> /        
+                <!-- <a href="">slides</a> / -->
+                <a href="">code</a> /
+                <!-- <a href="https://bit.ly/soccerdb1">dataset</a> -->
+              
+                <p></p>
+                <p> Scene Graph Generation (SGG) aims to represent visual scenes by identifying objects and their pairwise relationships, providing a structured understanding of image content. 
+                  However, inherent challenges like long-tailed class distributions and prediction variability necessitate uncertainty quantification in SGG for its practical viability. In
+                  this paper, we introduce a novel Conformal Prediction (CP) based framework, adaptive to any existing SGG method, for quantifying their predictive uncertainty by constructing
+                  well-calibrated prediction sets over their generated scene graphs. These scene graph prediction sets are designed to achieve statistically rigorous coverage guarantees. Additionally,
+                  to ensure these prediction sets contain the most practically interpretable scene graphs, we design an effective MLLM-based post-processing strategy for selecting the most visually 
+                  and semantically plausible scene graphs within these prediction sets. We show that our proposed approach can produce diverse possible scene graphs from an image, assess the reliability of SGG methods, and improve019
+                  overall SGG performance.</p>
+              </td>
+            </tr>
+          </tbody></table>
 
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tbody>
