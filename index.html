@@ -16,7 +16,7 @@
 
   <!-- <div class="container"> <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse text-right" id="navbarNav"> <ul class="navbar-nav ml-auto flex-nowrap"></li><li class="toggle-container"> <button id="light-toggle" title="Change theme"> <i class="fas fa-moon"></i> <i class="fas fa-sun"></i> </button> </li> </ul> </div> </div> -->
 
-    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+    <table style="width:100%;max-width:900px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
     <tr style="padding:0px">
       <td style="padding:0px">
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
@@ -37,6 +37,17 @@
                 </script>
               </p>
 
+              <script>
+                // A simple toggle function for showing/hiding any <div> by its ID.
+                function myFunction(divId) {
+                  const x = document.getElementById(divId);
+                  if (x.style.display === "none") {
+                    x.style.display = "block";
+                  } else {
+                    x.style.display = "none";
+                  }
+                }
+                </script>                
 
               <!-- Please replace this part with your own code. Google Analytics -->
               <head>
@@ -51,6 +62,8 @@
                 <link rel="icon" type="image/png" href="./images/website_dp_circle.png">
               </head>
               
+              <!-- Horizontal rule (centered, limited width) -->
+              <hr style="width:80%; margin:10px auto;">
 
               <p>I am a Ph.D. student at <strong>University of California, Riverside</strong> 
                 advised by <a href="https://vcg.ece.ucr.edu/amit">Dr. Amit K. Roy Chowdhury</a> and <a href="https://sites.google.com/view/arcs-lab/">Dr. Konstantinos Karydis</a>. 
@@ -84,11 +97,33 @@
           </tr>
         </tbody></table>
 
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+          <tr>
+            <td width="20%" valign="middle">
+              <a href="https://www.ucr.edu/"><img src="images/affliations/ucr.png" width="120"></a>
+            </td>
+            <td width="20%" valign="middle">
+              <a href="https://www.siemens.com/in/en.html"><img src="images/affliations/siemens.png" width="120"></a>
+            </td>
+            <td width="20%" valign="middle">
+              <a href="https://www.smu.ca/"><img src="images/affliations/smu.png" width="90"></a>
+            </td>
+            <td width="20%" valign="middle">
+              <a href="https://iisc.ac.in/"><img src="images/affliations/iisc.jpg" width="90"></a>
+            </td>
+            <td width="20%" valign="middle">
+              <a href="https://caluniv.ac.in/"><img src="images/affliations/cu.svg" width="90"></a>
+            </td>
+  
+          </tr>
+        </table>
+
         <!-- Research interests -->
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
           <tr>
             <td style="padding:20px;width:100%;vertical-align:middle">
-              <heading>Research Interests</heading>
+              <!-- <heading>Research Interests</heading> -->
+              <heading style="color:rgb(57, 57, 237);">Research Interests</heading>
               <p>
                 I am currently focused on enhancing the perception capabilities of robotic systems by developing robust and generalizable world representations, with a particular interest in leveraging foundation models for comprehensive scene understanding. 
                 I have also worked on pose estimation under occlusions. My previous work encompassed various sub-domains, including video understanding, person-reid and shape approximation methods with an emphasis on utilizing unlabeled data for real-world applications. <br>
@@ -107,11 +142,12 @@
 
         <!-- NEWS -->
         <div id="news-section" style="width:100%; padding:20px; box-sizing: border-box;">
-          <heading>News</heading>
+          <heading style="color:rgb(57, 57, 237);">News</heading>
           <div style="width:100%; height:150px; overflow-y:scroll;">
             <p>
-              <strong>Nov '24 : </strong>Serving as a reviewer for <strong>IROS 2025</strong><br>
-              <strong>Feb '25 : </strong>Paper accepted to <strong>CVPR 2025!</strong><br>
+              <font color="red"><strong>NEW!!</strong></font><strong> Mar '25 : </strong>Paper accepted to <strong>CVPR</strong> ABAW 2025!<br>
+              <strong>Feb '25 : </strong>Serving as a reviewer for <strong>IROS 2025</strong><br>
+              <font color="red"><strong>NEW!!</strong></font><strong> Feb '25 : </strong>Paper accepted to <strong>CVPR 2025!</strong><br>
               <strong>Nov '24 : </strong>Serving as a reviewer for <strong>ICRA 2025</strong><br>
               <strong>Oct '24 : </strong>Serving as a reviewer for <strong>ICLR 2025</strong><br>
               <strong>Dec '23 : </strong>Started the <strong>CRIS Colloquium</strong>, check it out <a href="hhttps://live-ucr-crisbcoe.pantheonsite.io/">here</a><br>
@@ -131,12 +167,13 @@
           </div>
         </div>
 
+
         <!-- PUBLICATIONS -->
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tbody>
             <tr>
               <td style="padding:20px;width:100%;vertical-align:middle">
-                <heading>Research</heading>
+                <heading style="color:rgb(57, 57, 237);">Publications/Pre-Prints</heading>
               </td>
             </tr>
           </tbody>
@@ -150,272 +187,726 @@
           </tr>
         </tbody></table>
 
+
+
+
+        <!-- SHIFT PAPER (CVPR-ABAW, 2025) -->
+        <table style="width:100%; border:0; border-spacing:0; border-collapse:separate;
+        margin-right:auto; margin-left:auto; margin: 20px 0;">
+        <tbody>
+        <tr onmouseout="cvpr_shift25_stop()" onmouseover="cvpr_shift25_start()" bgcolor="#ffffd0">
+        <!-- Left cell: SHIFT image -->
+        <td style="padding:20px;width:25%;vertical-align:middle">
+        <div class="one">
+        <!-- "two" div toggles opacity -->
+        <div class="two" id="cvpr_shift25_image">
+        <img src="images/shift.png" width="160">
+        </div>
+        <!-- Static underneath image -->
+        <img src="images/shift.png" width="160">
+        </div>
+        <!-- Hover JS for SHIFT paper -->
+        <script>
+        function cvpr_shift25_start() {
+        document.getElementById('cvpr_shift25_image').style.opacity = "1";
+        }
+        function cvpr_shift25_stop() {
+        document.getElementById('cvpr_shift25_image').style.opacity = "0";
+        }
+        cvpr_shift25_stop();
+        </script>
+        </td>
+
+        <!-- Right cell: SHIFT title, authors, etc. -->
+        <td style="padding:10px;width:75%;vertical-align:middle">
+        <a href="" target="_blank">
+        <papertitle>
+        <font size="3">Leveraging Synthetic Adult Datasets for Infant Pose Estimation</font>
+        <font color="red"><strong>(NEW!)</strong></font>
+        </papertitle>
+        </a>
+        <br><br>
+        <font size="3">
+        <strong>Sarosij Bose</strong>, Hannah Dela Cruz, Arindam Dutta, Elena Kokkoni,
+        Konstantinos Karydis, Amit K. Roy Chowdhury
+        </font>
+        <br>
+        <font size="3">
+        <em>IEEE/CVF Conference on Computer Vision and Pattern Recognition 
+        (<strong>CVPR</strong>)-ABAW, 2025
+        </em>
+        </font>
+        <br><p></p>
+
+        <!-- Links -->
+        <a href="javascript:void(0);" onclick="myFunction('cvpr_shift25_abs')">
+        <font size="3">Abstract</font>
+        </a> /
+        <a href="" target="_blank">
+        <font size="3">arXiv</font>
+        </a> /
+        <a href="javascript:void(0);" onclick="myFunction('cvpr_shift25_bib')">
+          <font size="3">BibTeX</font>
+        </a>
+        (All coming soon)
+        <p></p>
+
+        <!-- Hidden Abstract -->
+        <div id="cvpr_shift25_abs" style="display:none; text-align:justify; min-width:350px;">
+        <font size="3">
+        <em>
+        Human pose estimation is a critical tool across a variety of healthcare
+        applications. Despite significant progress in pose estimation algorithms
+        targeting adults, such developments for infants remain limited. Existing
+        algorithms for infant pose estimation, despite achieving commendable
+        performance, depend on fully supervised approaches that require large
+        amounts of labeled data. These algorithms also struggle with poor
+        generalizability under distribution shifts. To address these challenges,
+        we introduce SHIFT: Leveraging SyntHetic Adult Datasets for
+        Unsupervised InFanT Pose Estimation, which leverages the pseudo-labeling-
+        based Mean-Teacher framework to compensate for the lack of labeled data
+        and addresses distribution shifts by enforcing consistency between
+        the student and the teacher pseudo-labels. Additionally, to penalize
+        implausible predictions obtained from the mean-teacher framework we
+        also incorporate an infant manifold pose prior. To enhance SHIFT’s
+        self-occlusion perception ability, we propose a novel visibility
+        consistency module for improved alignment of the predicted poses with
+        the original image. Extensive experiments on multiple benchmarks show
+        that SHIFT significantly outperforms existing state-of-the-art
+        unsupervised domain adaptation (UDA) based pose estimation methods by 5%
+        and supervised infant pose estimation methods by a margin of 16%.
+        </em>
+        </font>
+        </div>
+
+        <!-- Hidden BibTeX -->
+        <div id="cvpr_shift25_bib" style="font-family:Courier; display:none; min-width:350px;">
+          <font size="2">
+            <br>
+            <!-- @InProceedings{SHIFT2025,<br>
+            &nbsp;&nbsp;author = {Bose, Sarosij and Dela Cruz, Hannah and Dutta, Arindam and Kokkoni, Elena and Karydis, Konstantinos and Roy Chowdhury, Amit K.},<br>
+            &nbsp;&nbsp;title = {Leveraging Synthetic Adult Datasets for Infant Pose Estimation},<br>
+            &nbsp;&nbsp;booktitle = {IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)-ABAW},<br>
+            &nbsp;&nbsp;year = {2025}<br>
+            } -->
+          </font>
+        </div>
+
+        </td>
+        </tr>
+        </tbody>
+        </table>
+
+
+        <!-- UQ-SGG PAPER (CVPR, 2025) -->
+        <table style="width:100%; border:0; border-spacing:0; border-collapse:separate;
+        margin-right:auto; margin-left:auto; margin: 20px 0;">
+        <tbody>
+        <tr onmouseout="cvpr_uqsgg25_stop()" onmouseover="cvpr_uqsgg25_start()" bgcolor="#ffffd0">
+        <!-- Left cell: UQ-SGG image -->
+        <td style="padding:20px;width:25%;vertical-align:middle">
+        <div class="one">
+        <!-- "two" div toggles opacity -->
+        <div class="two" id="cvpr_uqsgg25_image">
+        <img src="images/Con-SGG.png" width="160">
+        </div>
+        <!-- Static underneath image -->
+        <img src="images/Con-SGG.png" width="160">
+        </div>
+        <!-- Hover JS for UQ-SGG paper -->
+        <script>
+        function cvpr_uqsgg25_start() {
+        document.getElementById('cvpr_uqsgg25_image').style.opacity = "1";
+        }
+        function cvpr_uqsgg25_stop() {
+        document.getElementById('cvpr_uqsgg25_image').style.opacity = "0";
+        }
+        // Initialize hidden overlay
+        cvpr_uqsgg25_stop();
+        </script>
+        </td>
+
+        <!-- Right cell: UQ-SGG title, authors, etc. -->
+        <td style="padding:10px;width:75%;vertical-align:middle">
+        <a href="https://arxiv.org/pdf/2503.13947" target="_blank">
+        <papertitle>
+        <font size="3">
+        Conformal Prediction and MLLM-Aided Uncertainty Quantification in Scene Graph Generation
+        </font>
+        <font color="red"><strong>(NEW!)</strong></font>
+        </papertitle>
+        </a>
+        <br><br>
+
+        <font size="3">
+        Sayak Nag, Udita Ghosh, <strong>Sarosij Bose</strong>, Calvin-Khang Ta, Jiachen Li, 
+        Amit K. Roy Chowdhury
+        </font>
+        <br>
+        <font size="3">
+        <em>IEEE/CVF Conference on Computer Vision and Pattern Recognition (<strong>CVPR</strong>), 2025</em>
+        </font>
+        <br><p></p>
+
+        <!-- Links: Abstract + arXiv + BibTeX -->
+        <a href="javascript:void(0);" onclick="myFunction('cvpr_uqsgg25_abs')">
+        <font size="3">Abstract</font>
+        </a> /
+        <a href="https://arxiv.org/pdf/2503.13947" target="_blank">
+        <font size="3">arXiv</font>
+        </a> /
+        <a href="javascript:void(0);" onclick="myFunction('cvpr_uqsgg25_bib')">
+        <font size="3">BibTeX</font>
+        </a>
+        <p></p>
+
+        <!-- Hidden Abstract -->
+        <div id="cvpr_uqsgg25_abs" style="display:none; text-align:justify; min-width:350px;">
+        <font size="3">
+        <em>
+        Scene Graph Generation (SGG) aims to represent visual scenes by identifying objects 
+        and their pairwise relationships, providing a structured understanding of image content.
+        However, inherent challenges like long-tailed class distributions and prediction 
+        variability necessitate uncertainty quantification in SGG for practical viability. In
+        this paper, we introduce a novel Conformal Prediction (CP) framework, adaptable to any 
+        existing SGG method, for quantifying predictive uncertainty by constructing well-calibrated 
+        prediction sets over generated scene graphs. These prediction sets are designed to achieve
+        rigorous coverage guarantees. Additionally, to ensure the sets contain the most visually 
+        and semantically plausible scene graphs, we propose an MLLM-based post-processing strategy 
+        that selects the best candidates within these sets. Our approach can produce diverse possible 
+        scene graphs from a single image, assess the reliability of SGG methods, and ultimately 
+        improve overall SGG performance.
+        </em>
+        </font>
+        </div>
+
+        <!-- Hidden BibTeX -->
+        <div id="cvpr_uqsgg25_bib" style="font-family:Courier; display:none; min-width:350px;">
+        <font size="2">
+        <br>
+        @article{nag2025conformal,<br>
+        &nbsp;&nbsp;title={Conformal Prediction and MLLM aided Uncertainty Quantification in Scene Graph Generation},<br>
+        &nbsp;&nbsp;author={Nag, Sayak and Ghosh, Udita and Bose, Sarosij and Ta, Calvin-Khang and Li, Jiachen and Chowdhury, Amit K Roy},<br>
+        &nbsp;&nbsp;journal={arXiv preprint arXiv:2503.13947},<br>
+        &nbsp;&nbsp;year={2025}<br>
+        }
+        </font>
+        </div>
+        </td>
+        </tr>
+        </tbody>
+        </table>
+
+        <!-- OR-POSE Paper Block with BibTeX -->
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;
+        margin-right:auto;margin-left:auto; margin:20px 0;">
+        <tbody>
+        <tr onmouseout="or_pose_stop()" onmouseover="or_pose_start()" bgcolor="#ffffff">
+        <!-- Left cell: image + opacity control -->
+        <td style="padding:20px;width:25%;vertical-align:middle">
+        <div class="one">
+        <!-- “two” div is the one whose opacity is toggled -->
+        <div class="two" id="or_pose_image">
+        <img src="images/OR-POSE.png" width="160">
+        </div>
+        <!-- Static image (beneath the toggled div) -->
+        <img src="images/OR-POSE.png" width="160">
+        </div>
+
+        <!-- Mouseover/mouseout JS for OR-POSE -->
+        <script type="text/javascript">
+        function or_pose_start() {
+        document.getElementById('or_pose_image').style.opacity = "1";
+        }
+        function or_pose_stop() {
+        document.getElementById('or_pose_image').style.opacity = "0";
+        }
+        // Initialize hidden
+        or_pose_stop();
+        </script>
+        </td>
+
+        <!-- Right cell: title, authors, links, toggled abstract -->
+        <td style="padding:10px;width:75%;vertical-align:middle">
+        <!-- Paper title, linked to arXiv (or any URL) -->
+        <a href="https://arxiv.org/abs/2501.02773" target="_blank">
+        <papertitle>
+        <font size="3">
+        Unsupervised Domain Adaptation for Occlusion Resilient Human Pose Estimation
+        </font>
+        </papertitle>
+        </a>
+        <br><br>
+
+        <!-- Authors -->
+        <font size="3">
+        Arindam Dutta*, <strong>Sarosij Bose</strong>, Saketh Bachu, Calvin Khang-Ta,
+        Konstantinos Karydis, Amit K. Roy Chowdhury
+        </font>
+        <br>
+
+        <!-- Venue and year -->
+        <font size="3">
+        <em>arxiv pre-print, 2025</em>
+        </font>
+        <br><p></p>
+
+        <!-- Abstract toggle + links -->
+        <a href="javascript:void(0);" onclick="myFunction('or_pose_abs')">
+        <font size="3">Abstract</font>
+        </a> /
+        <a href="https://arxiv.org/abs/2501.02773" target="_blank">
+        <font size="3">arXiv</font>
+        </a> /
+        <a href="javascript:void(0);" onclick="myFunction('or_pose_bib')">
+        <font size="3">BibTeX</font>
+        </a>
+        <p></p>
+
+        <!-- Hidden abstract div -->
+        <div id="or_pose_abs" style="display:none; text-align:justify; min-width:350px;">
+        <font size="3">
+        <em>
+        Occlusions are a significant challenge to human pose estimation algorithms, often
+        resulting in inaccurate and anatomically implausible poses. Although current
+        occlusion-robust human pose estimation algorithms exhibit impressive performance
+        on existing datasets, their success is largely attributed to supervised training
+        and the availability of additional information, such as multiple views or temporal
+        continuity. Furthermore, these algorithms typically suffer from performance
+        degradation under distribution shifts. While existing domain-adaptive human pose
+        estimation algorithms address this bottleneck, they tend to perform suboptimally
+        when the target domain images are occluded, a common occurrence in real-life
+        scenarios. To address these challenges, we propose OR-POSE: Unsupervised Domain
+        Adaptation for Occlusion Resilient Human POSE Estimation. OR-POSE effectively
+        mitigates domain shifts and overcomes occlusion challenges via a mean-teacher
+        framework for iterative pseudo-label refinement. Additionally, OR-POSE enforces
+        realistic pose prediction by leveraging a learned human pose prior that incorporates
+        anatomical constraints into the adaptation process. Finally, OR-POSE avoids
+        overfitting to inaccurate pseudo-labels on heavily occluded images by employing a
+        visibility-based curriculum learning approach. Our experiments show that OR-POSE
+        outperforms analogous state-of-the-art methods by ~7% on challenging occluded
+        human pose estimation datasets.
+        </em>
+        </font>
+        </div>
+
+        <!-- Hidden BibTeX div -->
+        <div id="or_pose_bib" style="font-family:Courier; display:none; min-width:350px;">
+        <font size="2">
+        <br>
+        @article{dutta2025unsupervised,<br>
+        &nbsp;&nbsp;title={Unsupervised Domain Adaptation for Occlusion Resilient Human Pose Estimation},<br>
+        &nbsp;&nbsp;author={Dutta, Arindam and Bose, Sarosij and Bachu, Saketh and Ta, Calvin-Khang and Karydis, Konstantinos and Roy-Chowdhury, Amit K},<br>
+        &nbsp;&nbsp;journal={arXiv preprint arXiv:2501.02773},<br>
+        &nbsp;&nbsp;year={2025}<br>
+        }
+        </font>
+        </div>
+        </td>
+        </tr>
+        </tbody>
+        </table>
+        
+
+        <!-- Year heading -->
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tbody>
-            <tr onmouseout="clipnerf_stop()" onmouseover="clipnerf_start()">
-              <td style="padding:20px;width:25%;vertical-align:middle">
-                <div class="one">
-                  <img src='images/Con-SGG.png' width="160">
-                </div>
-                <script type="text/javascript">
-                  function clipnerf_start() {
-                    document.getElementById('clipnerf_image').style.opacity = "1";
-                  }
-
-                  function clipnerf_stop() {
-                    document.getElementById('clipnerf_image').style.opacity = "0";
-                  }
-                  clipnerf_stop()
-                </script>
-              </td>
-              <td style="padding:20px;width:75%;vertical-align:middle">
-                  <papertitle>Conformal Prediction and MLLM aided Uncertainity Quantification in Scene Graph Generation</papertitle>
-                <br>
-                 Sayak Nag, Udita Ghosh, <strong>Sarosij Bose</strong>, Calvin-Khang Ta, Jiachen Li, Amit K. Roy Chowdhury
-                <br>
-                <em>IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2025</em>
-                <br>
-                <a href="https://export-test.arxiv.org/abs/2503.13947">arxiv</a> /        
-                <!-- <a href="">slides</a> / -->
-                <a href="">code</a> /
-                <!-- <a href="https://bit.ly/soccerdb1">dataset</a> -->
-              
-                <p></p>
-                <p> Scene Graph Generation (SGG) aims to represent visual scenes by identifying objects and their pairwise relationships, providing a structured understanding of image content. 
-                  However, inherent challenges like long-tailed class distributions and prediction variability necessitate uncertainty quantification in SGG for its practical viability. In
-                  this paper, we introduce a novel Conformal Prediction (CP) based framework, adaptive to any existing SGG method, for quantifying their predictive uncertainty by constructing
-                  well-calibrated prediction sets over their generated scene graphs. These scene graph prediction sets are designed to achieve statistically rigorous coverage guarantees. Additionally,
-                  to ensure these prediction sets contain the most practically interpretable scene graphs, we design an effective MLLM-based post-processing strategy for selecting the most visually 
-                  and semantically plausible scene graphs within these prediction sets. We show that our proposed approach can produce diverse possible scene graphs from an image, assess the reliability of SGG methods, and improve019
-                  overall SGG performance.</p>
+            <tr>
+              <td style="padding:20px;width:100%;vertical-align:middle">
+                <heading><b>2023</b></heading>
               </td>
             </tr>
-          </tbody></table>
+          </tbody>
+        </table>
+
+        <!-- SoccerKDNet Paper Block in ECCV-style with BibTeX -->
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;
+        margin-right:auto;margin-left:auto; margin:20px 0;">
+        <tbody>
+        <tr onmouseout="soccer_2023_stop()" onmouseover="soccer_2023_start()" bgcolor="#ffffff">
+        <!-- Left cell: image + opacity control -->
+        <td style="padding:20px;width:25%;vertical-align:middle">
+        <div class="one">
+        <!-- “two” div is the one whose opacity is toggled -->
+        <div class="two" id="soccer_2023_image">
+        <img src="images/soccerkdnet.png" width="160">
+        </div>
+        <!-- Static image (beneath the toggled div) -->
+        <img src="images/soccerkdnet.png" width="160">
+        </div>
+
+        <!-- Hover JS for SoccerKDNet paper -->
+        <script type="text/javascript">
+        function soccer_2023_start() {
+        document.getElementById('soccer_2023_image').style.opacity = "1";
+        }
+        function soccer_2023_stop() {
+        document.getElementById('soccer_2023_image').style.opacity = "0";
+        }
+        // Initialize by hiding
+        soccer_2023_stop();
+        </script>
+        </td>
+
+        <!-- Right cell: title, authors, etc. -->
+        <td style="padding:10px;width:75%;vertical-align:middle">
+        <!-- Paper title, linked to the Springer chapter URL -->
+        <a href="https://link.springer.com/chapter/10.1007/978-3-031-45170-6_47" target="_blank">
+        <papertitle>
+        <font size="3">
+        SoccerKDNet: A Knowledge Distillation Framework for Action Recognition in Soccer Videos
+        </font>
+        </papertitle>
+        </a>
+        <br><br>
+
+        <font size="3">
+        <strong>Sarosij Bose</strong>, Saikat Sarkar, Amlan Chakrabarti
+        </font>
+        <br>
+        <font size="3">
+        <em>10th Springer International Conference on Pattern Recognition and 
+        Machine Intelligence (<strong>PReMI</strong>), 2023</em>
+        </font>
+        <br><p></p>
+
+        <!-- Links + Abstract toggle -->
+        <a href="javascript:void(0);" onclick="myFunction('soccer_2023_abs')">
+        <font size="3">Abstract</font>
+        </a> /
+        <a href="https://arxiv.org/abs/2307.07768" target="_blank">
+        <font size="3">arXiv</font>
+        </a> /
+        <a href="#" target="_blank">
+        <font size="3">slides</font>
+        </a> /
+        <a href="#" target="_blank">
+        <font size="3">code</font>
+        </a> /
+        <a href="https://bit.ly/soccerdb1" target="_blank">
+        <font size="3">Dataset</font>
+        </a> /
+        <!-- BibTeX Toggle Link -->
+        <a href="javascript:void(0);" onclick="myFunction('soccer_2023_bib')">
+        <font size="3">BibTeX</font>
+        </a>
+        <p></p>
+
+        <!-- Hidden Abstract -->
+        <div id="soccer_2023_abs" style="display:none; text-align:justify; min-width:350px;">
+        <font size="3">
+        <em>
+        Classifying player actions from soccer videos is a challenging problem, which has
+        become increasingly important in sports analytics over the years. Most
+        state-of-the-art methods employ highly complex offline networks, which makes
+        it difficult to deploy such models in resource-constrained scenarios. Here, we
+        propose a novel end-to-end knowledge-distillation-based transfer learning
+        network pre-trained on the Kinetics400 dataset, and then perform extensive
+        analysis on the learned framework by introducing a unique loss parameterization.
+        We also introduce a new dataset named "SoccerDB1" containing 448 videos spanning
+        4 diverse classes of players playing soccer. Furthermore, we propose a unique
+        loss parameter that helps linearly weigh the extent to which each network’s
+        predictions are utilized. Finally, we conduct a thorough performance study
+        using various changed hyperparameters. We also benchmark the first classification
+        results on the new SoccerDB1 dataset, obtaining 67.20% validation accuracy.
+        The dataset has been made publicly available at: 
+        <a href="https://bit.ly/soccerdb1">https://bit.ly/soccerdb1</a>
+        </em>
+        </font>
+        </div>
+
+        <!-- Hidden BibTeX block -->
+        <div id="soccer_2023_bib" style="font-family:Courier; display:none; min-width:350px;">
+        <font size="2">
+        <br>
+        @InProceedings{10.1007/978-3-031-45170-6_47,<br>
+        &nbsp;&nbsp;author={Bose, Sarosij and Sarkar, Saikat and Chakrabarti, Amlan},<br>
+        &nbsp;&nbsp;editor={Maji, Pradipta and Huang, Tingwen and Pal, Nikhil R. and Chaudhury, Santanu and De, Rajat K.},<br>
+        &nbsp;&nbsp;title={{SoccerKDNet: A Knowledge Distillation Framework for Action Recognition in Soccer Videos}},<br>
+        &nbsp;&nbsp;booktitle={{Pattern Recognition and Machine Intelligence}},<br>
+        &nbsp;&nbsp;year={{2023}},<br>
+        &nbsp;&nbsp;publisher={{Springer Nature Switzerland}},<br>
+        &nbsp;&nbsp;address={{Cham}},<br>
+        &nbsp;&nbsp;pages={{457--464}},<br>
+        &nbsp;&nbsp;abstract={{Classifying player actions from soccer videos is a challenging problem, which has become increasingly important in sports analytics over the years. Most state-of-the-art methods employ highly complex offline networks, which makes it difficult to deploy such models in resource constrained scenarios. Here, in this paper we propose a novel end-to-end knowledge distillation based transfer learning network pre-trained on the Kinetics400 dataset and then perform extensive analysis on the learned framework by introducing a unique loss parameterization. We also introduce a new dataset named ``SoccerDB1'' containing 448 videos and consisting of 4 diverse classes each of players playing soccer. Furthermore, we introduce an unique loss parameter that help us linearly weigh the extent to which the predictions of each network are utilized. Finally, we also perform a thorough performance study using various changed hyperparameters. We also benchmark the first classification results on the new SoccerDB1 dataset obtaining 67.20{\%} validation accuracy. The dataset has been made publicly available at: https://bit.ly/soccerdb1.}},<br>
+        &nbsp;&nbsp;isbn={{978-3-031-45170-6}}<br>
+        }
+        </font>
+        </div>
+        </td>
+        </tr>
+        </tbody>
+        </table>
+
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;
+                    margin-right:auto;margin-left:auto; margin:20px 0;">
+          <tbody>
+            <tr onmouseout="mitacs_stop()" onmouseover="mitacs_start()" bgcolor="#ffffff">
+              <!-- Left cell: image + opacity control -->
+              <td style="padding:20px;width:25%;vertical-align:middle">
+                <div class="one">
+                  <!-- “two” div is the one whose opacity is toggled -->
+                  <div class="two" id="mitacs_image">
+                    <img src="images/mitacs.png" width="160">
+                  </div>
+                  <!-- Static image (beneath the toggled div) -->
+                  <img src="images/mitacs.png" width="160">
+                </div>
+
+                <!-- Hover JS for SoccerKDNet paper -->
+                <script type="text/javascript">
+                  function mitacs_start() {
+                    document.getElementById('mitacs_image').style.opacity = "1";
+                  }
+                  function mitacs_stop() {
+                    document.getElementById('mitacs_image').style.opacity = "0";
+                  }
+                  // Initialize by hiding
+                  mitacs_stop();
+                </script>
+              </td>
+
+              <!-- Right cell: title, authors, etc. -->
+              <td style="padding:10px;width:75%;vertical-align:middle">
+                <!-- Paper title, linked to arXiv (or any URL) -->
+                <a href="https://sarosijbose.github.io/files/MITACS_final_report_sarosij_bose.pdf" target="_blank">
+                  <papertitle>
+                    <font size="3">
+                      Realtime motion capture for VR Applications
+                    </font>
+                  </papertitle>
+                </a>
+                <br><br>
+
+                <font size="3">
+                  <strong>Sarosij Bose</strong>, Jiju Poovvancheri
+                </font>
+                <br>
+                <font size="3">
+                  <em><strong>MITACS</strong> Globalink Technical Report</em>
+                </font>
+                <br><p></p>
+
+                <!-- Links + Abstract toggle -->
+                <a href="javascript:void(0);" onclick="myFunction('mitacs_abs')">
+                  <font size="3">Abstract</font>
+                </a> /
+                <a href="https://sarosijbose.github.io/files/MITACS_final_report_sarosij_bose.pdf" target="_blank">
+                  <font size="3">report</font>
+                </a> /
+                <a href="https://sarosijbose.github.io/files/SMU_summer_series.pdf" target="_blank">
+                  <font size="3">slides</font>
+                </a> /
+                <a href="https://github.com/sarosijbose/BodyTrack2D" target="_blank">
+                  <font size="3">code</font>
+                </a>
+                <!-- <a href="https://bit.ly/soccerdb1" target="_blank">
+                  <font size="3">dataset</font>
+                </a> -->
+                <p></p>
+
+                <!-- Hidden Abstract -->
+                <div id="mitacs_abs" style="display:none; text-align:justify; min-width:350px;">
+                  <font size="3">
+                    <em>
+                      We present a novel shape approximation method using a pill decomposition approach 
+                      given the surface points and their corresponding normals at each point on the surface.
+                      We first extract the maximal empty sphere representation of a given input shape
+                      and then construct the `pill`: consisting of two sphere meshes. These collection of 
+                      pills are progressively decomposed to obtain a good approximation of the original shape. 
+                      Our algorithm is easy to reuse and implement and is currently available in a multi-processing setup. 
+                      To ensure reproducibility and further research, the source code and raw data has also been released.</a>
+                    </em>
+                  </font>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- Drone-Assisted Forest Classification (ICCCIS 2022) -->
+        <table style="width:100%; border:0; border-spacing:0; border-collapse:separate;
+        margin-right:auto; margin-left:auto; margin:20px 0;">
+        <tbody>
+        <tr onmouseout="drone_icccis_stop()" onmouseover="drone_icccis_start()" bgcolor="#ffffff">
+        <!-- Left cell: image + opacity control -->
+        <td style="padding:20px;width:25%;vertical-align:middle">
+        <div class="one">
+        <!-- “two” div toggled on hover -->
+        <div class="two" id="drone_icccis_image">
+        <img src="images/drone icccis.png" width="160">
+        </div>
+        <!-- Static image beneath -->
+        <img src="images/drone icccis.png" width="160">
+        </div>
+
+        <!-- JS hover functions -->
+        <script type="text/javascript">
+        function drone_icccis_start() {
+        document.getElementById('drone_icccis_image').style.opacity = "1";
+        }
+        function drone_icccis_stop() {
+        document.getElementById('drone_icccis_image').style.opacity = "0";
+        }
+        // Initialize the overlay hidden
+        drone_icccis_stop();
+        </script>
+        </td>
+
+        <!-- Right cell: title, authors, links, toggled abstract -->
+        <td style="padding:10px;width:75%;vertical-align:middle">
+        <!-- Paper Title -->
+        <a href="https://doi.org/10.1109/ICCCIS56430.2022.10037612" target="_blank">
+        <papertitle>
+        <font size="3">
+        Drone Assisted Forest Structural Classification of Kejimkujik National Park using Deep Learning
+        </font>
+        </papertitle>
+        </a>
+        <br><br>
+
+        <!-- Authors -->
+        <font size="3">
+        Sutirtha Roy, <strong>Sarosij Bose</strong>, Karen Harper, Vaibhav Jaiswal, Manu Bansal
+        </font>
+        <br>
+
+        <!-- Venue and year -->
+        <font size="3">
+        <em>3rd International Conference on Computing, Communication, 
+        and Intelligent Systems (<strong>ICCCIS</strong>), 2022</em>
+        </font>
+        <br><p></p>
+
+        <!-- Links + Abstract toggle -->
+        <a href="javascript:void(0);" onclick="myFunction('drone_icccis_abs')">
+        <font size="3">Abstract</font>
+        </a> /
+        <a href="https://doi.org/10.1109/ICCCIS56430.2022.10037612" target="_blank">
+        <font size="3">paper</font>
+        </a> /
+        <a href="files/icccis-2022-330.pdf" target="_blank">
+        <font size="3">slides</font>
+        </a> /
+        <a href="#" target="_blank">
+        <font size="3">code</font>
+        </a>
+        <p></p>
+
+        <!-- Hidden abstract div (toggle on click) -->
+        <div id="drone_icccis_abs" style="display:none; text-align:justify; min-width:350px;">
+        <font size="3">
+        <em>
+        The wide array of terrestrial forest and wooded lands are one of the richest sources
+        because of their inherent structural diversity. For the diversity indicator of a forest,
+        structure plays a significant role. We propose a transfer learning framework based on
+        the ResNet-50 architecture, obtaining a test accuracy of 75.86%. In this paper, the
+        analysis of the structural diversity of Kejimkujik National Park is done using a drone
+        and deep learning methods that predict the forest’s structural class. We use a novel
+        forest structural diversity dataset collected using a DJI Mavic drone to train the
+        deep learning model.
+        </em>
+        </font>
+        </div>
+        </td>
+        </tr>
+        </tbody>
+        </table>
+
+
+
+        <!-- Lipschitz Bound Analysis (ICCCNT 2022) -->
+        <table style="width:100%; border:0; border-spacing:0; border-collapse:separate;
+        margin-right:auto; margin-left:auto; margin:20px 0;">
+        <tbody>
+        <tr onmouseout="icccnt_lipschitz_stop()" onmouseover="icccnt_lipschitz_start()" bgcolor="#ffffff">
+        <!-- Left cell: image + opacity control -->
+        <td style="padding:20px;width:25%;vertical-align:middle">
+        <div class="one">
+        <!-- “two” div toggles opacity -->
+        <div class="two" id="icccnt_lipschitz_image">
+        <img src="images/icccnt.png" width="160">
+        </div>
+        <!-- Static image (beneath the toggled div) -->
+        <img src="images/icccnt.png" width="160">
+        </div>
+
+        <!-- Hover JS for Lipschitz paper -->
+        <script type="text/javascript">
+        function icccnt_lipschitz_start() {
+        document.getElementById('icccnt_lipschitz_image').style.opacity = "1";
+        }
+        function icccnt_lipschitz_stop() {
+        document.getElementById('icccnt_lipschitz_image').style.opacity = "0";
+        }
+        // Initialize hidden
+        icccnt_lipschitz_stop();
+        </script>
+        </td>
+
+        <!-- Right cell: title, authors, links, toggled abstract -->
+        <td style="padding:10px;width:75%;vertical-align:middle">
+        <!-- Paper Title -->
+        <a href="https://doi.org/10.48550/arXiv.2207.07232" target="_blank">
+        <papertitle>
+        <font size="3">Lipschitz Bound Analysis of Neural Networks</font>
+        </papertitle>
+        </a>
+        <br><br>
+
+        <!-- Authors -->
+        <font size="3">
+        <strong>Sarosij Bose</strong>
+        </font>
+        <br>
+
+        <!-- Venue + year -->
+        <font size="3">
+        <em>13th IEEE International Conference on Computing Communication and Networking Technologies 
+        (<strong>ICCCNT</strong>), 2022</em>
+        </font>
+        <br><p></p>
+
+        <!-- Links + toggle -->
+        <a href="javascript:void(0);" onclick="myFunction('icccnt_lipschitz_abs')">
+        <font size="3">Abstract</font>
+        </a> /
+        <a href="https://doi.org/10.48550/arXiv.2207.07232" target="_blank">
+        <font size="3">paper</font>
+        </a> /
+        <a href="https://sarosijbose.github.io/files/ICCCNT_slides_2022.pdf" target="_blank">
+        <font size="3">slides</font>
+        </a> /
+        <a href="https://github.com/sarosijbose/LBANN" target="_blank">
+        <font size="3">code</font>
+        </a>
+        <p></p>
+
+        <!-- Hidden abstract div -->
+        <div id="icccnt_lipschitz_abs" style="display:none; text-align:justify; min-width:350px;">
+        <font size="3">
+        <em>
+        Lipschitz Bound Estimation is an effective method of regularizing deep neural networks 
+        to make them robust against adversarial attacks. This is useful in a variety of applications 
+        ranging from reinforcement learning to autonomous systems. In this paper, we highlight the 
+        significant gap in obtaining a non-trivial Lipschitz bound certificate for Convolutional 
+        Neural Networks (CNNs) and empirically support it with extensive graphical analysis. We also 
+        show that unrolling Convolutional layers (or Toeplitz matrices) can be employed to convert 
+        CNNs to a fully connected network. Further, we propose a simple algorithm to demonstrate the 
+        existing 20×–50× gap in a particular data distribution between the actual Lipschitz constant 
+        and the obtained tight bound. We also run thorough experiments on various network architectures, 
+        benchmarking them on MNIST and CIFAR-10. All these proposals are supported by extensive testing, 
+        graphs, histograms, and comparative analysis.
+        </em>
+        </font>
+        </div>
+        </td>
+        </tr>
+        </tbody>
+        </table>
 
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tbody>
-            <tr onmouseout="clipnerf_stop()" onmouseover="clipnerf_start()">
-              <td style="padding:20px;width:25%;vertical-align:middle">
-                <div class="one">
-                  <img src='images/OR-POSE.png' width="160">
-                </div>
-                <script type="text/javascript">
-                  function clipnerf_start() {
-                    document.getElementById('clipnerf_image').style.opacity = "1";
-                  }
-
-                  function clipnerf_stop() {
-                    document.getElementById('clipnerf_image').style.opacity = "0";
-                  }
-                  clipnerf_stop()
-                </script>
-              </td>
-              <td style="padding:20px;width:75%;vertical-align:middle">
-                  <papertitle>Unsupervised Domain Adaptation for Occlusion Resilient Human Pose Estimation</papertitle>
-                <br>
-                 Arindam Dutta*, <strong>Sarosij Bose*</strong>, Saketh Bachu, Calvin Khang-Ta, Konstantinos Karydis, Amit K. Roy Chowdhury
-                <br>
-                <em>arxiv pre-print, 2025</em>
-                <br>
-                <a href="https://arxiv.org/abs/2501.02773">arxiv</a> /        
-                <a href="">slides</a> /
-                <a href="">code</a> /
-                <!-- <a href="https://bit.ly/soccerdb1">dataset</a> -->
-              
-                <p></p>
-                <p> Occlusions are a significant challenge to human pose estimation algorithms, often resulting in inaccurate and anatomically implausible poses. 
-                  Although current occlusion-robust human pose estimation algorithms exhibit impressive performance on existing datasets, their success is largely attributed to supervised training and the availability of additional information, such as multiple views or temporal continuity. 
-                  Furthermore, these algorithms typically suffer from performance degradation under distribution shifts. While existing domain adaptive human pose estimation 
-                  algorithms address this bottleneck, they tend to perform suboptimally when the target domain images are occluded, a common occurrence in real-life scenarios. 
-                  To address these challenges, we propose OR-POSE: Unsupervised Domain Adaptation for Occlusion Resilient Human POSE Estimation. OR-POSE is an innovative unsupervised 
-                  domain adaptation algorithm which effectively mitigates domain shifts and overcomes occlusion challenges by employing the mean teacher framework for iterative 
-                  pseudo-label refinement. Additionally, OR-POSE reinforces realistic pose prediction by leveraging a learned human pose prior which incorporates the anatomical 
-                  constraints of humans in the adaptation process. Lastly, OR-POSE avoids overfitting to inaccurate pseudo labels generated from heavily occluded images by 
-                  employing a novel visibility-based curriculum learning approach. This enables the model to gradually transition from training samples with relatively less 
-                  occlusion to more challenging, heavily occluded samples. Extensive experiments show that OR-POSE outperforms existing analogous state-of-the-art 
-                  algorithms by &tilde; 7% on challenging occluded human pose estimation datasets.</p>
-              </td>
-            </tr>
-          </tbody></table>
-
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr>
-          <td style="padding:20px;width:100%;vertical-align:middle">
-            <heading><b>2023</b></heading>
-            </td>
-          </tr>
-        </tbody></table>
-
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-          <tbody>
-            <tr onmouseout="clipnerf_stop()" onmouseover="clipnerf_start()">
-              <td style="padding:20px;width:25%;vertical-align:middle">
-                <div class="one">
-                  <img src='images/soccerkdnet.png' width="160">
-                </div>
-                <script type="text/javascript">
-                  function clipnerf_start() {
-                    document.getElementById('clipnerf_image').style.opacity = "1";
-                  }
-
-                  function clipnerf_stop() {
-                    document.getElementById('clipnerf_image').style.opacity = "0";
-                  }
-                  clipnerf_stop()
-                </script>
-              </td>
-              <td style="padding:20px;width:75%;vertical-align:middle">
-                  <papertitle>SoccerKDNet: A Knowledge Distillation Framework for Action Recognition in Soccer Videos</papertitle>
-                <br>
-                 <strong>Sarosij Bose</strong>, Saikat Sarkar, Amlan Chakrabarti
-                <br>
-                <em>10th Springer International Conference on Pattern Recognition and Machine Intelligence <strong>(PReMI)</strong>, 2023</em>
-                <br>
-                <a href="https://arxiv.org/abs/2307.07768">arxiv</a> /        
-                <a href="">slides</a> /
-                <a href="">code</a> /
-                <a href="https://bit.ly/soccerdb1">dataset</a>
-              
-                <p></p>
-                <p> Classifying player actions from soccer videos is a challenging problem, which has become increasingly important in sports analytics over the years. Most state-of-the-art methods employ highly complex of-
-                  fline networks, which makes it difficult to deploy such models in resource constrained scenarios. Here, in this paper we propose a novel end-to-end knowledge distillation based transfer learning network pre-trained on the
-                  Kinetics400 dataset and then perform extensive analysis on the learned framework by introducing a unique loss parameterization. We also introduce a new dataset named "SoccerDB1" containing 448 videos and
-                  consisting of 4 diverse classes each of players playing soccer. Furthermore, we introduce an unique loss parameter that help us linearly weigh the extent to which the predictions of each network are utilized. Finally,
-                  we also perform a thorough performance study using various changed hyperparameters. We also benchmark the first classification results on the new SoccerDB1 dataset obtaining 67.20% validation accuracy. The
-                  dataset has been made publicly available at: https://bit.ly/soccerdb1 </p>
-              </td>
-            </tr>
-          </tbody></table>
-
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr>
-          <td style="padding:20px;width:100%;vertical-align:middle">
-            <heading><b>2022</b></heading>
-            </td>
-          </tr>
-        </tbody></table>
-
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-          <tbody>
-
-            <tr onmouseout="clipnerf_stop()" onmouseover="clipnerf_start()">
-              <td style="padding:20px;width:25%;vertical-align:middle">
-                <div class="one">
-                  <img src='images/mitacs.png' width="160">
-                </div>
-                <script type="text/javascript">
-                  function clipnerf_start() {
-                    document.getElementById('clipnerf_image').style.opacity = "1";
-                  }
-
-                  function clipnerf_stop() {
-                    document.getElementById('clipnerf_image').style.opacity = "0";
-                  }
-                  clipnerf_stop()
-                </script>
-              </td>
-              <td style="padding:20px;width:75%;vertical-align:middle">
-                  <papertitle>Realtime motion capture for VR Applications</papertitle>
-                <br>
-                <strong>Sarosij Bose</strong>, Jiju Poovvancheri
-                <br>
-                <em><strong>MITACS</strong> Globalink Technical Report</em>
-                <br>
-                <a href="https://sarosijbose.github.io/files/MITACS_final_report_sarosij_bose.pdf">paper</a> /
-                <a href="https://sarosijbose.github.io/files/SMU_summer_series.pdf">slides</a> /
-                <a href="https://github.com/sarosijbose/BodyTrack2D">code</a>
-                <p></p>
-                <p> We present a novel shape approximation method using a pill decomposition approach given the surface points and their corresponding normals 
-                  at each point on the surface. We first extract the maximal empty sphere representation of a given input shape and then construct 
-                  the `pill`: consisting of two sphere meshes. These collection of pills are progressively decomposed to obtain a good approximation of
-                   the original shape. Our algorithm is easy to reuse and implement and is currently available in a multi-processing setup. 
-                   To ensure reproducibility and further research, the source code and raw data has also been released.</p>
-              </td>
-            </tr>
-
-            <tr onmouseout="clipnerf_stop()" onmouseover="clipnerf_start()">
-              <td style="padding:20px;width:25%;vertical-align:middle">
-                <div class="one">
-                  <img src='images/drone icccis.png' width="160">
-                </div>
-                <script type="text/javascript">
-                  function clipnerf_start() {
-                    document.getElementById('clipnerf_image').style.opacity = "1";
-                  }
-
-                  function clipnerf_stop() {
-                    document.getElementById('clipnerf_image').style.opacity = "0";
-                  }
-                  clipnerf_stop()
-                </script>
-              </td>
-              <td style="padding:20px;width:75%;vertical-align:middle">
-                  <papertitle>Drone Assisted Forest Structural Classification of Kejimkujik National Park using Deep Learning</papertitle>
-                <br>
-                Sutirtha Roy, <strong>Sarosij Bose</strong>, Karen Harper, Vaibhav Jaiswal, Manu Bansal
-                <br>
-                <em>3rd International Conference on Computing, Communication, and Intelligent Systems (<strong>ICCCIS</strong>)</em>, 2022</em>
-                <br>
-                <a href="https://doi.org/10.1109/ICCCIS56430.2022.10037612"> paper</a> /
-                <a href="files/icccis-2022-330.pdf">slides</a> /
-                <a href="">code</a>
-                <p></p>
-                <p> The wide array of terrestrial forest and wooded lands are one of the richest sources because of their inherent structural diversity. 
-                  For the diversity indicator of a forest, structure plays a significant role in it. We propose a transfer learning framework consisting 
-                  of the ResNet-50 architecture using which we obtained a test accuracy of 75.86%. In this paper the analysis of the structural diversity 
-                  of the Kejimkujik National Park is done with the help of a drone and using deep learning methods which predict the structural class of 
-                  the forest. We have used a novel forest structural diversity dataset which was collected using DJI Mavic drone to train the deep learning model.</p>
-              </td>
-            </tr>
-
-            <tr onmouseout="clipnerf_stop()" onmouseover="clipnerf_start()">
-              <td style="padding:20px;width:25%;vertical-align:middle">
-                <div class="one">
-                  <img src='images/icccnt.png' width="160">
-                </div>
-                <script type="text/javascript">
-                  function clipnerf_start() {
-                    document.getElementById('clipnerf_image').style.opacity = "1";
-                  }
-
-                  function clipnerf_stop() {
-                    document.getElementById('clipnerf_image').style.opacity = "0";
-                  }
-                  clipnerf_stop()
-                </script>
-              </td>
-              <td style="padding:20px;width:75%;vertical-align:middle">
-                  <papertitle>Lipschitz Bound Analysis of Neural Networks</papertitle>
-                <br>
-                <strong>Sarosij Bose</strong>
-                <br>
-                <em>13th IEEE International Conference on Computing Communication and Networking Technologies (<strong>ICCCNT</strong>), 2022</em>
-                <br>
-                <a href="https://doi.org/10.48550/arXiv.2207.07232">paper </a> /
-                <a href="https://sarosijbose.github.io/files/ICCCNT_slides_2022.pdf">slides</a> /
-                <a href="https://github.com/sarosijbose/LBANN">code</a>
-                <p></p>
-                <p>Lipschitz Bound Estimation is an effective method of regularizing deep neural networks to make them robust against adversarial attacks. 
-                  This is useful in a variety of applications ranging from reinforcement learning to autonomous systems. 
-                  In this paper, we highlight the significant gap in obtaining a non-trivial Lipschitz bound certificate for Convolutional Neural Networks (CNNs) 
-                  and empirically support it with extensive graphical analysis. We also show that unrolling Convolutional layers or Toeplitz matrices can be 
-                  employed to convert Convolutional Neural Networks (CNNs) to a Fully Connected Network. Further, we propose a simple algorithm to show the 
-                  existing 20x-50x gap in a particular data distribution between the actual lipschitz constant and the obtained tight bound. 
-                  We also ran sets of thorough experiments on various network architectures and benchmark them on datasets like MNIST and CIFAR-10. 
-                  All these proposals are supported by extensive testing, graphs, histograms and comparative analysis. <br> 
-                </p>
-              </td>
-            </tr>
-            
-            
-
-            <!-- <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody> -->
-            <!-- <tr>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-              <heading><b>2021</b></heading>
-              </td>
-            </tr> -->
-            <!-- </tbody></table> -->
 
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
           <tr>
@@ -425,88 +916,192 @@
           </tr>
         </tbody></table>
 
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-          <tbody>
+        <!-- INDICON 2021: Fusion Architecture for HAR -->
+        <table style="width:100%; border:0; border-spacing:0; border-collapse:separate;
+        margin-right:auto; margin-left:auto; margin:20px 0;">
+        <tbody>
+        <tr onmouseout="indicon21_stop()" onmouseover="indicon21_start()" bgcolor="#ffffff">
+        <!-- Left cell: image + opacity control -->
+        <td style="padding:20px;width:25%;vertical-align:middle">
+        <div class="one">
+        <!-- “two” div toggled on hover -->
+        <div class="two" id="indicon21_image">
+        <img src="images/fusion.jpg" width="160">
+        </div>
+        <!-- Static image beneath -->
+        <img src="images/fusion.jpg" width="160">
+        </div>
 
-            <tr onmouseout="clipnerf_stop()" onmouseover="clipnerf_start()">
-              <td style="padding:20px;width:25%;vertical-align:middle">
-                <div class="one">
-                  <img src='images/fusion.jpg' width="160">
-                </div>
-                <script type="text/javascript">
-                  function clipnerf_start() {
-                    document.getElementById('clipnerf_image').style.opacity = "1";
-                  }
+        <!-- Hover JS for INDICON 2021 paper -->
+        <script type="text/javascript">
+        function indicon21_start() {
+        document.getElementById('indicon21_image').style.opacity = "1";
+        }
+        function indicon21_stop() {
+        document.getElementById('indicon21_image').style.opacity = "0";
+        }
+        // Initialize hidden overlay
+        indicon21_stop();
+        </script>
+        </td>
 
-                  function clipnerf_stop() {
-                    document.getElementById('clipnerf_image').style.opacity = "0";
-                  }
-                  clipnerf_stop()
-                </script>
-              </td>
-              <td style="padding:20px;width:75%;vertical-align:middle">
-                  <papertitle>A Fusion Architecture model for Human Activity Recognition</papertitle>
-                <br>
-                 <strong>Sarosij Bose</strong>, Amlan Chakrabarti
-                <br>
-                <em>18th IEEE India Council International Conference <strong>(INDICON)</strong>, 2021</em>
-                <br>
-                <a href="https://doi.org/10.1109/INDICON52576.2021.9691648">paper</a> /        
-                <a href="https://sarosijbose.github.io/files/INDICON_presentation_2021.pdf">slides</a> /
-                <a href="https://github.com/sarosijbose/A-Fusion-architecture-for-Human-Activity-Recognition">code</a>
-              
-                <p></p>
-                <p> Human Activity Recognition (HAR) is a domain of increasing interest with several two-stream architectures being suggested in recent years. 
-                  However, such models have a huge number of parameters and storage needs due to the presence of a dedicated temporal stream. 
-                  In this paper, we propose an architecture comprising of the weighted late fusion between the Softmax scores of the spatiotemporal stream (I3D) 
-                  and another 2D convolutional neural network stream (Xception). We show that our model produces competitive performance w.r.t to other existing 
-                  spatial and two-stream architectures along with reducing the number of parameters significantly and minimizing storage costs. </p>
-              </td>
-            </tr>
-          <!-- </tbody></table> -->
+        <!-- Right cell: title, authors, links, toggled abstract -->
+        <td style="padding:10px;width:75%;vertical-align:middle">
+        <!-- Paper Title -->
+        <a href="https://doi.org/10.1109/INDICON52576.2021.9691648" target="_blank">
+        <papertitle>
+        <font size="3">A Fusion Architecture model for Human Activity Recognition</font>
+        </papertitle>
+        </a>
+        <br><br>
 
-            <tr onmouseout="clipnerf_stop()" onmouseover="clipnerf_start()">
-              <td style="padding:20px;width:25%;vertical-align:middle">
-                <div class="one">
-                  <img src='images/rescnn.jpg' width="160">
-                </div>
-                <script type="text/javascript">
-                  function clipnerf_start() {
-                    document.getElementById('clipnerf_image').style.opacity = "1";
-                  }
+        <!-- Authors -->
+        <font size="3">
+        <strong>Sarosij Bose</strong>, Amlan Chakrabarti
+        </font>
+        <br>
 
-                  function clipnerf_stop() {
-                    document.getElementById('clipnerf_image').style.opacity = "0";
-                  }
-                  clipnerf_stop()
-                </script>
-              </td>
-              <td style="padding:20px;width:75%;vertical-align:middle">
-                  <papertitle>ResCNN: An alternative implementation of Convolutional Neural Networks</papertitle>
-                <br>
-                <strong>Sarosij Bose*</strong>, Avirup Dey*
-                <br>
-                <em>8th IEEE Uttar Pradesh International Conference (<strong>UPCON</strong>), 2021</em>
-                <br>
-                <a href="https://doi.org/10.1109/UPCON52273.2021.9667654"> paper</a> /
-                <a href="https://sarosijbose.github.io/files/ResCNN_UPCON_2021_Slides.pdf">slides</a> /
-                <a href="https://github.com/sarosijbose/ResCNN">code</a>
-                <p></p>
-                <p> Convolutional Neural Networks (CNN) have been used for long for feature extraction from images in deep learning. 
-                  Here we introduce ResilientCNN or ResCNN for short where we show that when convolution is implemented as an matrix-matrix operation 
-                  coupled with some image processing techniques like Singular Value Decomposition (SVD) can be used as an better alternative to 
-                  traditional convolution. We show that our ResCNN learns with bigger batch sizes and at much higher learning rates (7x) without 
-                  compromising on accuracy compared to traditional convolutional networks by implementing both models on the MNIST Dataset.</p>
-                  <em>*Equal Contribution</em>
-              </td>
-            </tr>
+        <!-- Venue + year -->
+        <font size="3">
+        <em>18th IEEE India Council International Conference 
+        (<strong>INDICON</strong>), 2021</em>
+        </font>
+        <br><p></p>
 
-          </tbody> </table>
+        <!-- Links + toggle -->
+        <a href="javascript:void(0);" onclick="myFunction('indicon21_abs')">
+        <font size="3">Abstract</font>
+        </a> /
+        <a href="https://doi.org/10.1109/INDICON52576.2021.9691648" target="_blank">
+        <font size="3">paper</font>
+        </a> /
+        <a href="https://sarosijbose.github.io/files/INDICON_presentation_2021.pdf" target="_blank">
+        <font size="3">slides</font>
+        </a> /
+        <a href="https://github.com/sarosijbose/A-Fusion-architecture-for-Human-Activity-Recognition" target="_blank">
+        <font size="3">code</font>
+        </a>
+        <p></p>
+
+        <!-- Hidden abstract div -->
+        <div id="indicon21_abs" style="display:none; text-align:justify; min-width:350px;">
+        <font size="3">
+        <em>
+        Human Activity Recognition (HAR) is a domain of increasing interest, with several
+        two-stream architectures proposed in recent years. However, such models often have
+        a huge number of parameters and large storage needs due to the presence of a dedicated
+        temporal stream. In this paper, we propose an approach that performs a weighted late
+        fusion between the Softmax scores of a spatiotemporal I3D stream and another 2D
+        convolutional neural network stream (Xception). We show that our model achieves
+        competitive performance compared to existing spatial and two-stream architectures,
+        while significantly reducing the number of parameters and storage overhead.
+        </em>
+        </font>
+        </div>
+        </td>
+        </tr>
+        </tbody>
+        </table>
+
+        <!-- UPCON 2021: ResCNN -->
+        <table style="width:100%; border:0; border-spacing:0; border-collapse:separate;
+        margin-right:auto; margin-left:auto; margin:20px 0;">
+        <tbody>
+        <tr onmouseout="rescnn_upcon_stop()" onmouseover="rescnn_upcon_start()" bgcolor="#ffffff">
+        <!-- Left cell: image + opacity control -->
+        <td style="padding:20px;width:25%;vertical-align:middle">
+        <div class="one">
+        <!-- “two” div toggled on hover -->
+        <div class="two" id="rescnn_upcon_image">
+        <img src="images/rescnn.jpg" width="160">
+        </div>
+        <!-- Static image beneath -->
+        <img src="images/rescnn.jpg" width="160">
+        </div>
+
+        <!-- Hover JS for ResCNN paper -->
+        <script type="text/javascript">
+        function rescnn_upcon_start() {
+        document.getElementById('rescnn_upcon_image').style.opacity = "1";
+        }
+        function rescnn_upcon_stop() {
+        document.getElementById('rescnn_upcon_image').style.opacity = "0";
+        }
+        // Initialize hidden overlay
+        rescnn_upcon_stop();
+        </script>
+        </td>
+
+        <!-- Right cell: title, authors, links, toggled abstract -->
+        <td style="padding:10px;width:75%;vertical-align:middle">
+        <!-- Paper Title -->
+        <a href="https://doi.org/10.1109/UPCON52273.2021.9667654" target="_blank">
+        <papertitle>
+        <font size="3">
+        ResCNN: An alternative implementation of Convolutional Neural Networks
+        </font>
+        </papertitle>
+        </a>
+        <br><br>
+
+        <!-- Authors -->
+        <font size="3">
+        <strong>Sarosij Bose*</strong>, Avirup Dey*
+        </font>
+        <br>
+
+        <!-- Venue + year -->
+        <font size="3">
+        <em>8th IEEE Uttar Pradesh International Conference 
+        (<strong>UPCON</strong>), 2021</em>
+        </font>
+        <br><p></p>
+
+        <!-- Links + toggle -->
+        <a href="javascript:void(0);" onclick="myFunction('rescnn_upcon_abs')">
+        <font size="3">Abstract</font>
+        </a> /
+        <a href="https://doi.org/10.1109/UPCON52273.2021.9667654" target="_blank">
+        <font size="3">paper</font>
+        </a> /
+        <a href="https://sarosijbose.github.io/files/ResCNN_UPCON_2021_Slides.pdf" target="_blank">
+        <font size="3">slides</font>
+        </a> /
+        <a href="https://github.com/sarosijbose/ResCNN" target="_blank">
+        <font size="3">code</font>
+        </a>
+        <p></p>
+
+        <!-- Hidden abstract div -->
+        <div id="rescnn_upcon_abs" style="display:none; text-align:justify; min-width:350px;">
+        <font size="3">
+        <em>
+        Convolutional Neural Networks (CNN) have long been used for feature extraction
+        from images in deep learning. Here we introduce ResilientCNN or ResCNN, where
+        we show that when convolution is implemented as a matrix–matrix operation,
+        coupled with image processing techniques like Singular Value Decomposition (SVD),
+        it can serve as a better alternative to traditional convolution. We demonstrate
+        that our ResCNN learns using larger batch sizes and much higher learning rates
+        (~7×) without compromising on accuracy, compared to traditional convolutional
+        networks, by conducting experiments on the MNIST dataset.
+        </em>
+        </font>
+        <br>
+        <font size="3">
+        <em>*Equal Contribution</em>
+        </font>
+        </div>
+        </td>
+        </tr>
+        </tbody>
+        </table>
+
+        <!-- Projects -->
 
         <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
           <tr>
             <td>
-              <heading>Select Projects</heading>
+              <heading>Projects</heading>
             </td>
           </tr>
         </tbody></table>
@@ -572,7 +1167,7 @@
             <td style="padding:20px;width:100%;vertical-align:middle">
               <heading>Misc</heading><br>
               <br>
-              <li> Served as a reviewer for <b>ICLR</b>, <b>ICRA</b>, <b>WACV</b>, <b>ICASSP</b> and <b>MLRC</b></li>
+              <li> Served as a reviewer for <b>ICLR</b>, <b>IROS</b>, <b>ICRA</b>, <b>WACV</b>, <b>ICASSP</b> and <b>MLRC</b></li>
               <li> My talks at the KyushuTech-CU joint symposium on Activity Recognition and 3D Convolution <a href="/files/talks/Kyushutech_presentation.pdf">here</a> and <a href="/files/talks/A General Overview of 3D Convolution .pdf">here</a></li>
               <li> On popular request, I have put up the MITACS application process on a <a href="https://medium.com/@sarosij/my-mitacs-experience-part-1-712dbcf93b10">blog</a></li>
               <!-- <li> Our team <b>EcoGeeks</b> <a href="/files/University_of_Calcutta_Sarosij Bose_EcoGeeks_Mumbai.pdf">qualified</a> for the Hult 2021 Mumbai regionals. For context, only ~40 teams do so all over India</li> -->
@@ -583,14 +1178,14 @@
       </tbody></table>
       <br>
 
-        <table align=center width=600px>
+        <!-- <table align=center width=600px>
                 <tr>
                   <td align=center width=600px>
                     <center><img src="./images/collage.png" height="75x" width="500x"></img><br></center>
 
                   </td>
                 </tr>
-        </table>
+        </table> -->
         
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tbody>
