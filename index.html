@@ -148,6 +148,7 @@
           <heading style="color:rgb(57, 57, 237);">News</heading>
           <div style="width:100%; height:150px; overflow-y:scroll;"> 
             <p>
+              <font color="red"><strong>NEW!!</strong></font><strong> Jun '25 : </strong>2 papers accepted to <strong>ICCV 2025!</strong> See you in sunny Hawaii 🏝️<br> 
               <font color="red"><strong>NEW!!</strong></font><strong> Jun '25 : </strong>I will be interning with <a href="https://www.nec-labs.com/">NEC Labs</a> over the summer!<br>
               <font color="red"><strong>NEW!!</strong></font><strong> Apr '25 : </strong>Received <a href="https://cvpr.thecvf.com/Conferences/2025/BroadeningParticipation">Travel Grant</a> to attend <strong>CVPR 2025!</strong><br>
               <strong>Apr '25 : </strong>Serving as a reviewer for <strong>IJCV</strong><br>
@@ -193,14 +194,199 @@
           </tr>
         </tbody></table>
 
+        <!-- UAR-SCENES PAPER (ICCV, 2025) -->
+        <table style="width:100%; border:0; border-spacing:0; border-collapse:separate;
+        margin-right:auto; margin-left:auto; margin: 20px 0;">
+        <tbody>
+        <tr onmouseout="iccv_uarscenes25_stop()" onmouseover="iccv_uarscenes25_start()" bgcolor="#ffffd0">
+        <!-- Left cell: UAR-Scenes image -->
+        <td style="padding:20px;width:25%;vertical-align:middle">
+        <div class="one">
+        <!-- "two" div toggles opacity -->
+        <div class="two" id="iccv_uarscenes25_image">
+        <img src="images/uar-scenes.png" width="160">
+        </div>
+        <!-- Static underneath image -->
+        <img src="images/uar-scenes.png" width="160">
+        </div>
+        <!-- Hover JS for UAR-Scenes paper -->
+        <script>
+        function iccv_uarscenes25_start() {
+        document.getElementById('iccv_uarscenes25_image').style.opacity = "1";
+        }
+        function iccv_uarscenes25_stop() {
+        document.getElementById('iccv_uarscenes25_image').style.opacity = "0";
+        }
+        iccv_uarscenes25_stop();
+        </script>
+        </td>
 
+        <!-- Right cell: UAR-Scenes title, authors, etc. -->
+        <td style="padding:10px;width:75%;vertical-align:middle">
+        <a href="https://arxiv.org/abs/2503.15742" target="_blank">
+        <papertitle>
+        <font size="3">Uncertainty Aware Diffusion Guided Refinement of 3D Scenes</font>
+        <font color="red"><strong>(NEW!)</strong></font>
+        </papertitle>
+        </a>
+        <br><br>
+        <font size="3">
+        <strong>Sarosij Bose</strong>, Arindam Dutta, Sayak Nag, Junge Zhang, Jiachen Li, Konstantinos Karydis, Amit K. Roy Chowdhury
+        </font>
+        <br>
+        <font size="3">
+        <em>IEEE/CVF International Conference on Computer Vision
+        (<strong>ICCV</strong>), 2025
+        </em>
+        </font>
+        <br><p></p>
+
+        <!-- Links -->
+        <a href="javascript:void(0);" onclick="myFunction('iccv_uarscenes25_abs')">
+        <font size="3">Abstract</font>
+        </a> /
+        <a href="https://arxiv.org/abs/2503.15742" target="_blank">
+        <font size="3">arXiv</font>
+        </a> /
+        <a href="javascript:void(0);" onclick="myFunction('iccv_uarscenes25_bib')">
+        <font size="3">BibTeX</font>
+        </a>
+        <!-- (All coming soon) -->
+        <p></p>
+
+        <!-- Hidden Abstract -->
+        <div id="iccv_uarscenes25_abs" style="display:none; text-align:justify; min-width:350px;">
+        <font size="3">
+        <em>
+        Reconstructing 3D scenes from a single image is a fundamentally ill-posed task due to the severely under-constrained nature of the problem. 
+        Consequently, when the scene is rendered from novel camera views, existing single image to 3D reconstruction methods render incoherent and blurry views. 
+        This problem is exacerbated when the unseen regions are far away from the input camera. In this work, we address these inherent limitations in existing 
+        single image-to-3D scene feedforward networks. To alleviate the poor performance due to insufficient information beyond the input image's view, we leverage 
+        a strong generative prior in the form of a pre-trained latent video diffusion model, for iterative refinement of a coarse scene represented by optimizable 
+        Gaussian parameters. To ensure that the style and texture of the generated images align with that of the input image, we incorporate on-the-fly Fourier-style 
+        transfer between the generated images and the input image. Additionally, we design a semantic uncertainty quantification module that calculates the per-pixel 
+        entropy and yields uncertainty maps used to guide the refinement process from the most confident pixels while discarding the remaining highly uncertain ones.
+        We conduct extensive experiments on real-world scene datasets, including in-domain RealEstate-10K and out-of-domain KITTI-v2, showing that our approach can 
+        provide more realistic and high-fidelity novel view synthesis results compared to existing state-of-the-art methods.
+        </em>
+        </font>
+        </div>
+
+        <!-- Hidden BibTeX -->
+        <div id="iccv_uarscenes25_bib" style="font-family:Courier; display:none; min-width:350px;">
+        <font size="2">
+        <br>
+          @article{bose2025uncertainty,
+            title={Uncertainty-Aware Diffusion Guided Refinement of 3D Scenes},
+            author={Bose, Sarosij and Dutta, Arindam and Nag, Sayak and Zhang, Junge and Li, Jiachen and Karydis, Konstantinos and Chowdhury, Amit K Roy},
+            journal={arXiv preprint arXiv:2503.15742},
+            year={2025}
+          }
+        </font>
+        </div>
+
+        </td>
+        </tr>
+        </tbody>
+        </table>
+
+        <!-- VOccl3D PAPER (ICCV, 2025) -->
+        <table style="width:100%; border:0; border-spacing:0; border-collapse:separate;
+        margin-right:auto; margin-left:auto; margin: 20px 0;">
+        <tbody>
+        <tr onmouseout="iccv_voccl3d25_stop()" onmouseover="iccv_voccl3d25_start()" bgcolor="#ffffd0">
+        <!-- Left cell: VOccl3D image -->
+        <td style="padding:20px;width:25%;vertical-align:middle">
+        <div class="one">
+        <!-- "two" div toggles opacity -->
+        <div class="two" id="iccv_voccl3d25_image">
+        <img src="images/voccl3d.png" width="160">
+        </div>
+        <!-- Static underneath image -->
+        <img src="images/voccl3d.png" width="160">
+        </div>
+        <!-- Hover JS for VOccl3D paper -->
+        <script>
+        function iccv_voccl3d25_start() {
+        document.getElementById('iccv_voccl3d25_image').style.opacity = "1";
+        }
+        function iccv_voccl3d25_stop() {
+        document.getElementById('iccv_voccl3d25_image').style.opacity = "0";
+        }
+        iccv_voccl3d25_stop();
+        </script>
+        </td>
+
+        <!-- Right cell: VOccl3D title, authors, etc. -->
+        <td style="padding:10px;width:75%;vertical-align:middle">
+        <a href="#" target="_blank">
+        <papertitle>
+        <font size="3">VOccl3D: A Video Benchmark Dataset for 3D Human Pose and Shape Estimation under Occlusions</font>
+        <font color="red"><strong>(NEW!)</strong></font>
+        </papertitle>
+        </a>
+        <br><br>
+        <font size="3">
+        Yash Garg, Saketh Bachu, Arindam Dutta, Rohit Lal, <strong>Sarosij Bose</strong>, Calvin-Khang Ta, M. Salman Asif, Amit K. Roy Chowdhury
+        </font>
+        <br>
+        <font size="3">
+        <em>IEEE/CVF International Conference on Computer Vision
+        (<strong>ICCV</strong>), 2025
+        </em>
+        </font>
+        <br><p></p>
+
+        <!-- Links -->
+        <a href="javascript:void(0);" onclick="myFunction('iccv_voccl3d25_abs')">
+        <font size="3">Abstract</font>
+        </a> /
+        <a href="#" target="_blank">
+        <font size="3">paper</font>
+        </a> /
+        <a href="javascript:void(0);" onclick="myFunction('iccv_voccl3d25_bib')">
+        <font size="3">BibTeX</font>
+        </a>
+        <!-- (All coming soon) -->
+        <p></p>
+
+        <!-- Hidden Abstract -->
+        <div id="iccv_voccl3d25_abs" style="display:none; text-align:justify; min-width:350px;">
+        <font size="3">
+        <em>
+      Human pose and shape (HPS) estimation methods have been extensively studied, with many demonstrating high zero-shot performance on in-the-wild images and videos. 
+      However, these methods often struggle in challenging scenarios involving complex human poses or significant occlusions. Although some studies address 3D human pose 
+      estimation under occlusion, they typically evaluate performance on datasets that lack realistic or substantial occlusions, e.g., most existing datasets introduce 
+      occlusions with random patches over the human or clipart-style overlays, which may not reflect real-world challenges. To bridge this gap in realistic occlusion 
+      datasets, we introduce a novel benchmark dataset, VOccl3D, a video-based human occlusion dataset with body pose and shape annotations. 
+      Inspired by works such as AGORA and BEDLAM, we constructed this dataset using advanced computer graphics rendering techniques, incorporating diverse real-world occlusion
+       scenarios, clothing textures, and human motions. Additionally, we fine-tuned recent HPS methods, CLIFF and BEDLAM-CLIFF, on our dataset, demonstrating significant 
+       qualitative and quantitative improvements across multiple public datasets, as well as on the test split of our dataset, while comparing its performance with other 
+       state-of-the-art methods. Furthermore, we leveraged our dataset to enhance human detection performance under occlusion by fine-tuning an existing object detector, 
+       YOLO11, thus leading to a robust end-to-end HPS estimation system under occlusions. Overall, this dataset serves as a valuable resource for future research aimed at 
+       benchmarking methods designed to handle occlusions, offering a more realistic alternative to existing occlusion datasets.
+        </em>
+        </font>
+        </div>
+
+        <!-- Hidden BibTeX -->
+        <div id="iccv_voccl3d25_bib" style="font-family:Courier; display:none; min-width:350px;">
+        <font size="2">
+        <br>
+        </font>
+        </div>
+
+        </td>
+        </tr>
+        </tbody>
+        </table>
 
 
         <!-- SHIFT PAPER (CVPR-ABAW, 2025) -->
         <table style="width:100%; border:0; border-spacing:0; border-collapse:separate;
         margin-right:auto; margin-left:auto; margin: 20px 0;">
         <tbody>
-        <tr onmouseout="cvpr_shift25_stop()" onmouseover="cvpr_shift25_start()" bgcolor="#ffffd0">
+        <tr onmouseout="cvpr_shift25_stop()" onmouseover="cvpr_shift25_start()" bgcolor="#ffffff">
         <!-- Left cell: SHIFT image -->
         <td style="padding:20px;width:25%;vertical-align:middle">
         <div class="one">
@@ -225,10 +411,10 @@
 
         <!-- Right cell: SHIFT title, authors, etc. -->
         <td style="padding:10px;width:75%;vertical-align:middle">
-        <a href="http://arxiv.org/abs/2504.05789" target="_blank">
+        <a href="https://openaccess.thecvf.com/content/CVPR2025W/ABAW/papers/Bose_Leveraging_Synthetic_Adult_Datasets_for_Unsupervised_Infant_Pose_Estimation_CVPRW_2025_paper.pdf" target="_blank">
         <papertitle>
         <font size="3">Leveraging Synthetic Adult Datasets for Infant Pose Estimation</font>
-        <font color="red"><strong>(NEW!)</strong></font>
+        <!-- <font color="red"><strong>(NEW!)</strong></font> -->
         </papertitle>
         </a>
         <br><br>
@@ -248,8 +434,8 @@
         <a href="javascript:void(0);" onclick="myFunction('cvpr_shift25_abs')">
         <font size="3">Abstract</font>
         </a> /
-        <a href="http://arxiv.org/abs/2504.05789" target="_blank">
-        <font size="3">arXiv</font>
+        <a href="https://openaccess.thecvf.com/content/CVPR2025W/ABAW/papers/Bose_Leveraging_Synthetic_Adult_Datasets_for_Unsupervised_Infant_Pose_Estimation_CVPRW_2025_paper.pdf" target="_blank">
+        <font size="3">paper</font>
         </a> /
         <a href="javascript:void(0);" onclick="myFunction('cvpr_shift25_bib')">
           <font size="3">BibTeX</font>
@@ -289,10 +475,11 @@
         <div id="cvpr_shift25_bib" style="font-family:Courier; display:none; min-width:350px;">
           <font size="2">
             <br>
-            @article{bose2025leveraging,
+            @inproceedings{bose2025leveraging,
               title={Leveraging Synthetic Adult Datasets for Unsupervised Infant Pose Estimation},
-              author={Bose, Sarosij and Cruz, Hannah Dela and Dutta, Arindam and Kokkoni, Elena and Karydis, Konstantinos and Roy-Chowdhury, Amit K},
-              journal={arXiv preprint arXiv:2504.05789},
+              author={Bose, Sarosij and Cruz, Hannah Dela and Dutta, Arindam and Kokkoni, Elena and Karydis, Konstantinos and Chowdhury, Amit Kumar Roy},
+              booktitle={Proceedings of the Computer Vision and Pattern Recognition Conference},
+              pages={5562--5571},
               year={2025}
             }
           </font>
@@ -308,7 +495,7 @@
         <table style="width:100%; border:0; border-spacing:0; border-collapse:separate;
         margin-right:auto; margin-left:auto; margin: 20px 0;">
         <tbody>
-        <tr onmouseout="cvpr_uqsgg25_stop()" onmouseover="cvpr_uqsgg25_start()" bgcolor="#ffffd0">
+        <tr onmouseout="cvpr_uqsgg25_stop()" onmouseover="cvpr_uqsgg25_start()" bgcolor="#ffffff">
         <!-- Left cell: UQ-SGG image -->
         <td style="padding:20px;width:25%;vertical-align:middle">
         <div class="one">
@@ -334,12 +521,12 @@
 
         <!-- Right cell: UQ-SGG title, authors, etc. -->
         <td style="padding:10px;width:75%;vertical-align:middle">
-        <a href="https://arxiv.org/pdf/2503.13947" target="_blank">
+        <a href="https://openaccess.thecvf.com/content/CVPR2025/papers/Nag_Conformal_Prediction_and_MLLM_aided_Uncertainty_Quantification_in_Scene_Graph_CVPR_2025_paper.pdf" target="_blank">
         <papertitle>
         <font size="3">
         Conformal Prediction and MLLM-Aided Uncertainty Quantification in Scene Graph Generation
         </font>
-        <font color="red"><strong>(NEW!)</strong></font>
+        <!-- <font color="red"><strong>(NEW!)</strong></font> -->
         </papertitle>
         </a>
         <br><br>
@@ -358,8 +545,8 @@
         <a href="javascript:void(0);" onclick="myFunction('cvpr_uqsgg25_abs')">
         <font size="3">Abstract</font>
         </a> /
-        <a href="https://arxiv.org/pdf/2503.13947" target="_blank">
-        <font size="3">arXiv</font>
+        <a href="https://openaccess.thecvf.com/content/CVPR2025/papers/Nag_Conformal_Prediction_and_MLLM_aided_Uncertainty_Quantification_in_Scene_Graph_CVPR_2025_paper.pdf" target="_blank">
+        <font size="3">paper</font>
         </a> /
         <a href="javascript:void(0);" onclick="myFunction('cvpr_uqsgg25_bib')">
         <font size="3">BibTeX</font>
@@ -390,11 +577,12 @@
         <div id="cvpr_uqsgg25_bib" style="font-family:Courier; display:none; min-width:350px;">
         <font size="2">
         <br>
-        @article{nag2025conformal,<br>
-        &nbsp;&nbsp;title={Conformal Prediction and MLLM aided Uncertainty Quantification in Scene Graph Generation},<br>
-        &nbsp;&nbsp;author={Nag, Sayak and Ghosh, Udita and Bose, Sarosij and Ta, Calvin-Khang and Li, Jiachen and Chowdhury, Amit K Roy},<br>
-        &nbsp;&nbsp;journal={arXiv preprint arXiv:2503.13947},<br>
-        &nbsp;&nbsp;year={2025}<br>
+        @inproceedings{nag2025conformal,
+          title={Conformal Prediction and MLLM aided Uncertainty Quantification in Scene Graph Generation},
+          author={Nag, Sayak and Ghosh, Udita and Ta, Calvin-Khang and Bose, Sarosij and Li, Jiachen and Roy-Chowdhury, Amit K},
+          booktitle={Proceedings of the Computer Vision and Pattern Recognition Conference},
+          pages={11676--11686},
+          year={2025}
         }
         </font>
         </div>
