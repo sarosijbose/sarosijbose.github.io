@@ -30,10 +30,18 @@
               <p align="center">
                 <b>email</b>:&nbsp;
                 <font id="email" style="display:inline;">ojnsmemsearb.sosoce@ii.s<a href="#" onclick="emailScramble.initAnimatedBubbleSort();return false;">unscramble</a></font>
-                <script>
+                <!-- <script>
                   emailScramble = new scrambledString(document.getElementById('email'),
                        'emailScramble', 'sarosijbose2000@gmail.com',
                        [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25]);
+                </script> -->
+                <script>
+                  emailScramble = new scrambledString(
+                    document.getElementById('email'),
+                    'emailScramble',
+                    'sarosij.bose@email.ucr.edu',
+                    [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26]
+                  );
                 </script>
               </p>
 
@@ -170,6 +178,126 @@
               </td>
             </tr>
           </tbody>
+        </table>
+
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <tr>
+          <td style="padding:20px;width:100%;vertical-align:middle">
+            <heading><b>2026</b></heading>
+            </td>
+          </tr>
+        </tbody></table>
+
+                <!-- OR-POSE Paper Block with BibTeX -->
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;
+        margin-right:auto;margin-left:auto; margin:20px 0;">
+        <tbody>
+        <tr onmouseout="or_pose_stop()" onmouseover="or_pose_start()" bgcolor="#ffffd0">
+        <!-- Left cell: image + opacity control -->
+        <td style="padding:20px;width:25%;vertical-align:middle">
+        <div class="one">
+        <!-- “two” div is the one whose opacity is toggled -->
+        <div class="two" id="or_pose_image">
+        <img src="images/OR-POSE.png" width="160">
+        </div>
+        <!-- Static image (beneath the toggled div) -->
+        <img src="images/OR-POSE.png" width="160">
+        </div>
+
+        <!-- Mouseover/mouseout JS for OR-POSE -->
+        <script type="text/javascript">
+        function or_pose_start() {
+        document.getElementById('or_pose_image').style.opacity = "1";
+        }
+        function or_pose_stop() {
+        document.getElementById('or_pose_image').style.opacity = "0";
+        }
+        // Initialize hidden
+        or_pose_stop();
+        </script>
+        </td>
+
+        <!-- Right cell: title, authors, links, toggled abstract -->
+        <td style="padding:10px;width:75%;vertical-align:middle">
+        <!-- Paper title, linked to arXiv (or any URL) -->
+        <a href="https://arxiv.org/abs/2501.02773" target="_blank">
+        <papertitle>
+        <font size="3">
+        VisOR: Visibility guided Self-Supervised Occlusion-Resilient Human Pose Estimation
+        </font>
+        <font color="red"><strong>(NEW!)</strong></font>
+        </papertitle>
+        </a>
+        <br><br>
+
+        <!-- Authors -->
+        <font size="3">
+        Arindam Dutta, <strong>Sarosij Bose</strong>, Rohit Kundu, Calvin Khang-Ta, Saketh Bachu, 
+        Konstantinos Karydis, Amit K. Roy Chowdhury
+        </font>
+        <br>
+
+        <!-- Venue and year -->
+        <font size="3">
+        <em>IEEE/CVF Winter Conference on Applications of Computer Vision
+        (<strong>WACV</strong>), 2026
+        </font>
+        <br><p></p>
+
+        <!-- Abstract toggle + links -->
+        <a href="javascript:void(0);" onclick="myFunction('or_pose_abs')">
+        <font size="3">Abstract</font>
+        </a> /
+        <a href="https://arxiv.org/abs/2501.02773" target="_blank">
+        <font size="3">arXiv</font>
+        </a> /
+        <a href="javascript:void(0);" onclick="myFunction('or_pose_bib')">
+        <font size="3">BibTeX</font>
+        </a>
+        <p></p>
+
+        <!-- Hidden abstract div -->
+        <div id="or_pose_abs" style="display:none; text-align:justify; min-width:350px;">
+        <font size="3">
+        <em>
+        Occlusions are a significant challenge to human pose estimation algorithms, often
+        resulting in inaccurate and anatomically implausible poses. Although current
+        occlusion-robust human pose estimation algorithms exhibit impressive performance
+        on existing datasets, their success is largely attributed to supervised training
+        and the availability of additional information, such as multiple views or temporal
+        continuity. Furthermore, these algorithms typically suffer from performance
+        degradation under distribution shifts. While existing domain-adaptive human pose
+        estimation algorithms address this bottleneck, they tend to perform suboptimally
+        when the target domain images are occluded, a common occurrence in real-life
+        scenarios. To address these challenges, we propose OR-POSE: Unsupervised Domain
+        Adaptation for Occlusion Resilient Human POSE Estimation. OR-POSE effectively
+        mitigates domain shifts and overcomes occlusion challenges via a mean-teacher
+        framework for iterative pseudo-label refinement. Additionally, OR-POSE enforces
+        realistic pose prediction by leveraging a learned human pose prior that incorporates
+        anatomical constraints into the adaptation process. Finally, OR-POSE avoids
+        overfitting to inaccurate pseudo-labels on heavily occluded images by employing a
+        visibility-based curriculum learning approach. Our experiments show that OR-POSE
+        outperforms analogous state-of-the-art methods by ~7% on challenging occluded
+        human pose estimation datasets.
+        </em>
+        </font>
+        </div>
+
+        <!-- Hidden BibTeX div -->
+        <div id="or_pose_bib" style="font-family:Courier; display:none; min-width:350px;">
+        <font size="2">
+        <br>
+        @article{dutta2025unsupervised,<br>
+        &nbsp;&nbsp;title={Unsupervised Domain Adaptation for Occlusion Resilient Human Pose Estimation},<br>
+        &nbsp;&nbsp;author={Dutta, Arindam and Bose, Sarosij and Bachu, Saketh and Ta, Calvin-Khang and Karydis, Konstantinos and Roy-Chowdhury, Amit K},<br>
+        &nbsp;&nbsp;journal={arXiv preprint arXiv:2501.02773},<br>
+        &nbsp;&nbsp;year={2025}<br>
+        }
+        </font>
+        </div>
+        </td>
+        </tr>
+        </tbody>
         </table>
 
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
@@ -591,116 +719,6 @@
           booktitle={Proceedings of the Computer Vision and Pattern Recognition Conference},
           pages={11676--11686},
           year={2025}
-        }
-        </font>
-        </div>
-        </td>
-        </tr>
-        </tbody>
-        </table>
-
-        <!-- OR-POSE Paper Block with BibTeX -->
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;
-        margin-right:auto;margin-left:auto; margin:20px 0;">
-        <tbody>
-        <tr onmouseout="or_pose_stop()" onmouseover="or_pose_start()" bgcolor="#ffffff">
-        <!-- Left cell: image + opacity control -->
-        <td style="padding:20px;width:25%;vertical-align:middle">
-        <div class="one">
-        <!-- “two” div is the one whose opacity is toggled -->
-        <div class="two" id="or_pose_image">
-        <img src="images/OR-POSE.png" width="160">
-        </div>
-        <!-- Static image (beneath the toggled div) -->
-        <img src="images/OR-POSE.png" width="160">
-        </div>
-
-        <!-- Mouseover/mouseout JS for OR-POSE -->
-        <script type="text/javascript">
-        function or_pose_start() {
-        document.getElementById('or_pose_image').style.opacity = "1";
-        }
-        function or_pose_stop() {
-        document.getElementById('or_pose_image').style.opacity = "0";
-        }
-        // Initialize hidden
-        or_pose_stop();
-        </script>
-        </td>
-
-        <!-- Right cell: title, authors, links, toggled abstract -->
-        <td style="padding:10px;width:75%;vertical-align:middle">
-        <!-- Paper title, linked to arXiv (or any URL) -->
-        <a href="https://arxiv.org/abs/2501.02773" target="_blank">
-        <papertitle>
-        <font size="3">
-        Unsupervised Domain Adaptation for Occlusion Resilient Human Pose Estimation
-        </font>
-        </papertitle>
-        </a>
-        <br><br>
-
-        <!-- Authors -->
-        <font size="3">
-        Arindam Dutta, <strong>Sarosij Bose</strong>, Saketh Bachu, Calvin Khang-Ta,
-        Konstantinos Karydis, Amit K. Roy Chowdhury
-        </font>
-        <br>
-
-        <!-- Venue and year -->
-        <font size="3">
-        <em>arxiv pre-print, 2025</em>
-        </font>
-        <br><p></p>
-
-        <!-- Abstract toggle + links -->
-        <a href="javascript:void(0);" onclick="myFunction('or_pose_abs')">
-        <font size="3">Abstract</font>
-        </a> /
-        <a href="https://arxiv.org/abs/2501.02773" target="_blank">
-        <font size="3">arXiv</font>
-        </a> /
-        <a href="javascript:void(0);" onclick="myFunction('or_pose_bib')">
-        <font size="3">BibTeX</font>
-        </a>
-        <p></p>
-
-        <!-- Hidden abstract div -->
-        <div id="or_pose_abs" style="display:none; text-align:justify; min-width:350px;">
-        <font size="3">
-        <em>
-        Occlusions are a significant challenge to human pose estimation algorithms, often
-        resulting in inaccurate and anatomically implausible poses. Although current
-        occlusion-robust human pose estimation algorithms exhibit impressive performance
-        on existing datasets, their success is largely attributed to supervised training
-        and the availability of additional information, such as multiple views or temporal
-        continuity. Furthermore, these algorithms typically suffer from performance
-        degradation under distribution shifts. While existing domain-adaptive human pose
-        estimation algorithms address this bottleneck, they tend to perform suboptimally
-        when the target domain images are occluded, a common occurrence in real-life
-        scenarios. To address these challenges, we propose OR-POSE: Unsupervised Domain
-        Adaptation for Occlusion Resilient Human POSE Estimation. OR-POSE effectively
-        mitigates domain shifts and overcomes occlusion challenges via a mean-teacher
-        framework for iterative pseudo-label refinement. Additionally, OR-POSE enforces
-        realistic pose prediction by leveraging a learned human pose prior that incorporates
-        anatomical constraints into the adaptation process. Finally, OR-POSE avoids
-        overfitting to inaccurate pseudo-labels on heavily occluded images by employing a
-        visibility-based curriculum learning approach. Our experiments show that OR-POSE
-        outperforms analogous state-of-the-art methods by ~7% on challenging occluded
-        human pose estimation datasets.
-        </em>
-        </font>
-        </div>
-
-        <!-- Hidden BibTeX div -->
-        <div id="or_pose_bib" style="font-family:Courier; display:none; min-width:350px;">
-        <font size="2">
-        <br>
-        @article{dutta2025unsupervised,<br>
-        &nbsp;&nbsp;title={Unsupervised Domain Adaptation for Occlusion Resilient Human Pose Estimation},<br>
-        &nbsp;&nbsp;author={Dutta, Arindam and Bose, Sarosij and Bachu, Saketh and Ta, Calvin-Khang and Karydis, Konstantinos and Roy-Chowdhury, Amit K},<br>
-        &nbsp;&nbsp;journal={arXiv preprint arXiv:2501.02773},<br>
-        &nbsp;&nbsp;year={2025}<br>
         }
         </font>
         </div>
