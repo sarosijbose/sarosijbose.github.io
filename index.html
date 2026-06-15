@@ -6,6 +6,7 @@
   <meta name="author" content="Sarosij Bose">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
   <!-- <script defer src="js/toggle.js"></script> -->
   <link rel="icon" type="image/png" href="images/website_dp_circle.png">
@@ -55,6 +56,34 @@
                     x.style.display = "none";
                   }
                 }
+
+                document.addEventListener('DOMContentLoaded', function() {
+                  const iconMap = {
+                    'abstract': '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h10l3 3v15H7z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M17 3v4h4M10 11h7M10 15h7M10 19h4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>',
+                    'arxiv': '<i class="ai ai-arxiv" aria-hidden="true"></i>',
+                    'bibtex': '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 6c-2 0-3 1.2-3 3v1.2c0 1.1-.4 1.8-1.4 1.8 1 0 1.4.7 1.4 1.8V15c0 1.8 1 3 3 3M17 6c2 0 3 1.2 3 3v1.2c0 1.1.4 1.8 1.4 1.8-1 0-1.4.7-1.4 1.8V15c0 1.8-1 3-3 3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M10 9h4M9 12h6M10 15h4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>',
+                    'website': '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>',
+                    'video': '<svg viewBox="0 0 28 20" aria-hidden="true"><path d="M27.4 3.1A3.5 3.5 0 0 0 25 0.7C22.8 0 14 0 14 0S5.2 0 3 0.7A3.5 3.5 0 0 0 0.6 3.1 36.8 36.8 0 0 0 0 10a36.8 36.8 0 0 0 0.6 6.9A3.5 3.5 0 0 0 3 19.3c2.2 0.7 11 0.7 11 0.7s8.8 0 11-0.7a3.5 3.5 0 0 0 2.4-2.4A36.8 36.8 0 0 0 28 10a36.8 36.8 0 0 0-0.6-6.9Z" fill="#ff0000"/><path d="M11.2 14.3 18.5 10l-7.3-4.3z" fill="#fff"/></svg>',
+                    'code': '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5a9.7 9.7 0 0 0-3.1 18.9c.5.1.7-.2.7-.5v-1.8c-2.9.6-3.5-1.2-3.5-1.2-.5-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 0 1.6 1.1 1.6 1.1.9 1.6 2.5 1.1 3 .9.1-.7.4-1.1.7-1.3-2.3-.3-4.7-1.2-4.7-5.1 0-1.1.4-2 1.1-2.8-.1-.3-.5-1.4.1-2.8 0 0 .9-.3 2.9 1.1a10 10 0 0 1 5.2 0c2-1.4 2.9-1.1 2.9-1.1.6 1.4.2 2.5.1 2.8.7.8 1.1 1.7 1.1 2.8 0 4-2.4 4.8-4.7 5.1.4.3.8 1 .8 2.1v3.1c0 .3.2.6.8.5A9.7 9.7 0 0 0 12 2.5Z" fill="currentColor"/></svg>',
+                    'paper': '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h8l4 4v16H6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M14 2v5h5M8.5 12h7M8.5 16h7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>',
+                    'slides': '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v12H4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M8 20h8M12 16v4M8 9h8M8 12h5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>',
+                    'report': '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h8l4 4v16H6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M14 2v5h5M8.5 12h7M8.5 16h7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>',
+                    'dataset': '<svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="5" rx="7" ry="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M5 5v10c0 1.7 3.1 3 7 3s7-1.3 7-3V5M5 10c0 1.7 3.1 3 7 3s7-1.3 7-3" fill="none" stroke="currentColor" stroke-width="2"/></svg>'
+                  };
+
+                  document.querySelectorAll('a').forEach(function(link) {
+                    if (link.querySelector('.pub-icon')) return;
+                    const label = link.textContent.trim().toLowerCase();
+                    if (!iconMap[label]) return;
+
+                    const icon = document.createElement('span');
+                    icon.className = 'pub-icon';
+                    icon.innerHTML = iconMap[label];
+                    link.classList.add('pub-link');
+                    link.dataset.pubLabel = label;
+                    link.insertBefore(icon, link.firstChild);
+                  });
+                });
                 </script>                
 
               <!-- Please replace this part with your own code. Google Analytics -->
@@ -83,13 +112,13 @@
               <!-- <p> 
                 Beyond academics, I find recreation in the <a href="files/Cert_Fine_Arts.pdf">Arts</a>, a competent photographer, amateur chess player.
               </p> -->
-              <p style="text-align:center">
-                <a href="mailto:sarosij.bose@email.ucr.edu">Email</a>&nbsp/&nbsp
+              <p class="contact-links">
+                <a href="mailto:sarosij.bose@email.ucr.edu"><span class="contact-icon">✉</span>Email</a>&nbsp/&nbsp
                 <!-- <a href="files/Sarosij_Bose_resume.pdf">CV</a> &nbsp/&nbsp -->
-                <a href="https://scholar.google.com/citations?user=AxWd_loAAAAJ">Google Scholar</a> &nbsp/&nbsp
-                <a href="https://twitter.com/SarosijB">X</a> &nbsp/&nbsp
-                <a href="https://github.com/sarosijbose">Github</a> &nbsp/&nbsp
-                <a href="https://www.linkedin.com/in/sarosijbose">LinkedIn</a>
+                <a href="https://scholar.google.com/citations?user=AxWd_loAAAAJ"><span class="contact-icon">🎓</span>Google Scholar</a> &nbsp/&nbsp
+                <a href="https://twitter.com/SarosijB"><span class="contact-icon">𝕏</span>X</a> &nbsp/&nbsp
+                <a href="https://github.com/sarosijbose"><span class="contact-icon github-contact-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5a9.7 9.7 0 0 0-3.1 18.9c.5.1.7-.2.7-.5v-1.8c-2.9.6-3.5-1.2-3.5-1.2-.5-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 0 1.6 1.1 1.6 1.1.9 1.6 2.5 1.1 3 .9.1-.7.4-1.1.7-1.3-2.3-.3-4.7-1.2-4.7-5.1 0-1.1.4-2 1.1-2.8-.1-.3-.5-1.4.1-2.8 0 0 .9-.3 2.9 1.1a10 10 0 0 1 5.2 0c2-1.4 2.9-1.1 2.9-1.1.6 1.4.2 2.5.1 2.8.7.8 1.1 1.7 1.1 2.8 0 4-2.4 4.8-4.7 5.1.4.3.8 1 .8 2.1v3.1c0 .3.2.6.8.5A9.7 9.7 0 0 0 12 2.5Z" fill="currentColor"/></svg></span>Github</a> &nbsp/&nbsp
+                <a href="https://www.linkedin.com/in/sarosijbose"><span class="contact-icon">in</span>LinkedIn</a>
               </p>
             </td>
             <td style="padding:2.5%;width:40%;max-width:40%">
@@ -128,9 +157,9 @@
           <tr>
             <td style="padding:20px;width:100%;vertical-align:middle">
               <!-- <heading>Research Interests</heading> -->
-              <heading style="color:rgb(57, 57, 237);">Research Interests</heading>
+              <heading>Research Interests</heading>
               <p>
-                  My research interests lie at the intersection of <strong>Computer Vision</strong> and <strong>Robotics</strong> with a particular focus on building autonomous perception systems which can learn to understand and interact with the 3D world around them with <strong>minimal human supervision</strong>. As a part of this broader effort, I have worked on problems in <strong>3D scene reconstruction</strong>, <strong>Grounding for Vision-Language Models</strong> and <strong>Human Pose Estimation</strong>.
+                  My research lies at the intersection of <strong>Perception</strong>, <strong>Robotics</strong>, and <strong>Generative AI</strong>. I am interested in building world models for agents: systems that can reconstruct, simulate, reason about, and interact with complex environments with limited supervision. Toward this goal, my work spans <strong>3D scene reconstruction, generation and understanding</strong>, <strong>uncertainty-aware perception</strong>, <strong>alignment and reasoning for vision-language models</strong>, and <strong>human/scene modeling</strong> under real-world observations.
                   <br>
                   <br>
                   I am always open to new collaborations and research ideas. Feel free to reach out if you are interested in working together!
@@ -141,21 +170,30 @@
       </tbody></table>
 
         <!-- NEWS -->
-        <div id="news-section" style="width:100%; padding:20px; box-sizing: border-box;">
-          <heading style="color:rgb(57, 57, 237);">News</heading>
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <tr>
+            <td style="padding:20px 20px 0 20px;width:100%;vertical-align:middle">
+              <heading>News</heading>
+            </td>
+          </tr>
+        </tbody></table>
+        <div id="news-section" style="width:100%; padding:20px; box-sizing: border-box; margin-top:10px;">
           <div style="width:100%; height:150px; overflow-y:scroll;"> 
             <p>
-              <font color="red"><strong>NEW!!</strong></font><strong> Nov '25 : </strong><a href="https://arxiv.org/abs/2501.02773">VisOR</a> accepted to <strong>WACV 2026!</strong> See you in Tucson!<br> 
+              <span class="new-tag">NEW!!</span><strong> May '26 : </strong>Our new work on <strong>post-training VLMs for visual alignment</strong> done at NEC: <a href="https://arxiv.org/abs/2512.16201">VALOR</a> is online, check it out!<br>
+              <span class="new-tag">NEW!!</span><strong> Mar '26 : </strong>Reviewing for <strong>CVPR'26</strong>, <strong>ECCV'26</strong>, <strong>NeurIPS'26</strong> and <strong>Trans. on Medical Imaging (TMI)</strong>.<br>
+              <strong>Jan '26 : </strong>Received travel grant to attend <strong>WACV'26</strong>, see you there!<br>
+              <strong>Nov '25 : </strong><a href="https://arxiv.org/abs/2501.02773">VisOR</a> accepted to <strong>WACV 2026!</strong> See you in Tucson!<br> 
               <strong>Oct '25 : </strong>Serving as a reviewer for <strong>CVPR 2026</strong><br>
-              <font color="red"><strong>NEW!!</strong></font><strong> Sep '25 : </strong>Received Travel Grant to attend <strong>ICCV 2025!</strong><br>
-              <font color="red"><strong>NEW!!</strong></font><strong> Aug '25 : </strong>Officially a PhD Candidate now!<br>
-              <font color="red"><strong>NEW!!</strong></font><strong> Jun '25 : </strong>2 papers accepted to <strong>ICCV 2025!</strong> See you in sunny Hawaii 🏝️<br> 
-              <font color="red"><strong>NEW!!</strong></font><strong> Jun '25 : </strong>I will be interning with <a href="https://www.nec-labs.com/">NEC Labs</a> over the summer!<br>
-              <font color="red"><strong>NEW!!</strong></font><strong> Apr '25 : </strong>Received <a href="https://cvpr.thecvf.com/Conferences/2025/BroadeningParticipation">Travel Grant</a> to attend <strong>CVPR 2025!</strong><br>
+              <strong>Sep '25 : </strong>Received Travel Grant to attend <strong>ICCV 2025!</strong><br>
+              <strong>Aug '25 : </strong>Officially a PhD Candidate now!<br>
+              <strong>Jun '25 : </strong>2 papers accepted to <strong>ICCV 2025!</strong> See you in sunny Hawaii 🏝️<br> 
+              <strong>Jun '25 : </strong>I will be interning with <a href="https://www.nec-labs.com/">NEC Labs</a> over the summer!<br>
+              <strong>Apr '25 : </strong>Received <a href="https://cvpr.thecvf.com/Conferences/2025/BroadeningParticipation">Travel Grant</a> to attend <strong>CVPR 2025!</strong><br>
               <strong>Apr '25 : </strong>Serving as a reviewer for <strong>IJCV</strong><br>
-              <font color="red"><strong>NEW!!</strong></font><strong> Mar '25 : </strong><a href="https://sarosijbose.github.io/SHIFT/">SHIFT</a> accepted to <strong>CVPR</strong> ABAW 2025!<br>
+              <strong>Mar '25 : </strong><a href="https://sarosijbose.github.io/SHIFT/">SHIFT</a> accepted to <strong>CVPR</strong> ABAW 2025!<br>
               <strong>Feb '25 : </strong>Serving as a reviewer for <strong>IROS 2025</strong><br>
-              <font color="red"><strong>NEW!!</strong></font><strong> Feb '25 : </strong>Paper accepted to <strong>CVPR 2025!</strong><br>
+              <strong>Feb '25 : </strong>Paper accepted to <strong>CVPR 2025!</strong><br>
               <strong>Nov '24 : </strong>Serving as a reviewer for <strong>ICRA 2025</strong><br>
               <strong>Oct '24 : </strong>Serving as a reviewer for <strong>ICLR 2025</strong><br>
               <strong>Dec '23 : </strong>Started the <strong>CRIS Colloquium</strong>, check it out <a href="hhttps://live-ucr-crisbcoe.pantheonsite.io/">here</a><br>
@@ -174,7 +212,7 @@
           <tbody>
             <tr>
               <td style="padding:20px;width:100%;vertical-align:middle">
-                <heading style="color:rgb(57, 57, 237);">Publications/Pre-Prints</heading>
+                <heading>Publications/Pre-Prints</heading>
               </td>
             </tr>
           </tbody>
@@ -183,25 +221,105 @@
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
           <tr>
           <td style="padding:20px;width:100%;vertical-align:middle">
-            <heading><b>2026</b></heading>
+            <heading class="year-heading"><b>2026</b></heading>
             </td>
           </tr>
         </tbody></table>
+
+        <!-- VALOR Paper Block with BibTeX -->
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;
+        margin-right:auto;margin-left:auto; margin:20px 0;">
+        <tbody>
+        <tr onmouseout="valor_stop()" onmouseover="valor_start()" bgcolor="#ffffd0">
+        <td style="padding:20px;width:25%;vertical-align:middle">
+        <div class="one valor-one">
+        <div class="two valor-two" id="valor_image">
+        <img class="valor-thumb" src="images/valor.png" width="190">
+        </div>
+        <img class="valor-thumb" src="images/valor.png" width="190">
+        </div>
+
+        <script type="text/javascript">
+        function valor_start() {
+        document.getElementById('valor_image').style.opacity = "1";
+        }
+        function valor_stop() {
+        document.getElementById('valor_image').style.opacity = "0";
+        }
+        valor_stop();
+        </script>
+        </td>
+
+        <td style="padding:10px;width:75%;vertical-align:middle">
+        <a href="https://arxiv.org/abs/2512.16201" target="_blank">
+        <papertitle>
+        <font size="3">
+        VALOR: Visual Alignment of Medical Vision-Language Models for Grounded Radiology Report Generation
+        </font>
+        <font color="red"><strong>(NEW!)</strong></font>
+        </papertitle>
+        </a>
+        <br><br>
+
+        <font size="3">
+        <strong>Sarosij Bose</strong>, Ravi K. Rajendran, Biplob Debnath, Konstantinos Karydis, Amit K. Roy-Chowdhury, Srimat Chakradhar
+        </font>
+        <br>
+
+        <font size="3">
+        <em><strong>arXiv</strong>, 2026</em>
+        </font>
+        <br><p></p>
+
+        <a class="pub-link" data-pub-label="abstract" href="javascript:void(0);" onclick="myFunction('valor_abs')">
+        <span class="pub-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h10l3 3v15H7z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M17 3v4h4M10 11h7M10 15h7M10 19h4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><font size="3">Abstract</font>
+        </a> /
+        <a class="pub-link" data-pub-label="arxiv" href="https://arxiv.org/abs/2512.16201" target="_blank">
+        <span class="pub-icon"><i class="ai ai-arxiv" aria-hidden="true"></i></span><font size="3">arXiv</font>
+        </a> /
+        <a class="pub-link" data-pub-label="bibtex" href="javascript:void(0);" onclick="myFunction('valor_bib')">
+        <span class="pub-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 6c-2 0-3 1.2-3 3v1.2c0 1.1-.4 1.8-1.4 1.8 1 0 1.4.7 1.4 1.8V15c0 1.8 1 3 3 3M17 6c2 0 3 1.2 3 3v1.2c0 1.1.4 1.8 1.4 1.8-1 0-1.4.7-1.4 1.8V15c0 1.8-1 3-3 3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M10 9h4M9 12h6M10 15h4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><font size="3">BibTeX</font>
+        </a>
+        <p></p>
+
+        <div id="valor_abs" style="display:none; text-align:justify; min-width:350px;">
+        <font size="3">
+        <em>
+        VALOR improves grounded radiology report generation by aligning medical vision-language models with both clinical text quality and image-level evidence. The method combines clinically informed textual reasoning with self-supervised visual reasoning from a frozen domain expert, steering report generation toward semantically complete and visually faithful outputs without requiring preference pairs, retrieval databases, or additional annotations.
+        </em>
+        </font>
+        </div>
+
+        <div id="valor_bib" style="font-family:Courier; display:none; min-width:350px;">
+        <font size="2">
+        <br>
+        @article{bose2025visual,<br>
+        &nbsp;&nbsp;title={Visual Alignment of Medical Vision-Language Models for Grounded Radiology Report Generation},<br>
+        &nbsp;&nbsp;author={Bose, Sarosij and Rajendran, Ravi K. and Debnath, Biplob and Karydis, Konstantinos and Roy-Chowdhury, Amit K. and Chakradhar, Srimat},<br>
+        &nbsp;&nbsp;journal={arXiv preprint arXiv:2512.16201},<br>
+        &nbsp;&nbsp;year={2025}<br>
+        }
+        </font>
+        </div>
+        </td>
+        </tr>
+        </tbody>
+        </table>
 
                 <!-- OR-POSE Paper Block with BibTeX -->
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;
         margin-right:auto;margin-left:auto; margin:20px 0;">
         <tbody>
-        <tr onmouseout="or_pose_stop()" onmouseover="or_pose_start()" bgcolor="#ffffd0">
+        <tr onmouseout="or_pose_stop()" onmouseover="or_pose_start()" bgcolor="#ffffff">
         <!-- Left cell: image + opacity control -->
         <td style="padding:20px;width:25%;vertical-align:middle">
-        <div class="one">
+        <div class="one wide-thumb-one">
         <!-- “two” div is the one whose opacity is toggled -->
-        <div class="two" id="or_pose_image">
-        <img src="images/OR-POSE.png" width="160">
+        <div class="two wide-thumb-two" id="or_pose_image">
+        <img class="wide-thumb" src="images/OR-POSE.png" width="190">
         </div>
         <!-- Static image (beneath the toggled div) -->
-        <img src="images/OR-POSE.png" width="160">
+        <img class="wide-thumb" src="images/OR-POSE.png" width="190">
         </div>
 
         <!-- Mouseover/mouseout JS for OR-POSE -->
@@ -220,7 +338,7 @@
         <!-- Right cell: title, authors, links, toggled abstract -->
         <td style="padding:10px;width:75%;vertical-align:middle">
         <!-- Paper title, linked to arXiv (or any URL) -->
-        <a href="https://arxiv.org/abs/2501.02773" target="_blank">
+        <a href="https://openaccess.thecvf.com/content/WACV2026/html/Dutta_Visibility_guided_Self-Supervised_Occlusion-Resilient_Human_Pose_Estimation_WACV_2026_paper.html" target="_blank">
         <papertitle>
         <font size="3">
         VisOR: Visibility guided Self-Supervised Occlusion-Resilient Human Pose Estimation
@@ -239,8 +357,9 @@
 
         <!-- Venue and year -->
         <font size="3">
-        <em>IEEE/CVF Winter Conference on Applications of Computer Vision
+        <em><strong>IEEE/CVF Winter Conference on Applications of Computer Vision</strong>
         (<strong>WACV</strong>), 2026
+        </em>
         </font>
         <br><p></p>
 
@@ -303,7 +422,7 @@
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
           <tr>
           <td style="padding:20px;width:100%;vertical-align:middle">
-            <heading><b>2025</b></heading>
+            <heading class="year-heading"><b>2025</b></heading>
             </td>
           </tr>
         </tbody></table>
@@ -312,7 +431,7 @@
         <table style="width:100%; border:0; border-spacing:0; border-collapse:separate;
         margin-right:auto; margin-left:auto; margin: 20px 0;">
         <tbody>
-        <tr onmouseout="iccv_uarscenes25_stop()" onmouseover="iccv_uarscenes25_start()" bgcolor="#ffffd0">
+        <tr onmouseout="iccv_uarscenes25_stop()" onmouseover="iccv_uarscenes25_start()" bgcolor="#ffffff">
         <!-- Left cell: UAR-Scenes image -->
         <td style="padding:20px;width:25%;vertical-align:middle">
         <div class="one">
@@ -337,10 +456,9 @@
 
         <!-- Right cell: UAR-Scenes title, authors, etc. -->
         <td style="padding:10px;width:75%;vertical-align:middle">
-        <a href="https://arxiv.org/abs/2503.15742" target="_blank">
+        <a href="https://openaccess.thecvf.com/content/ICCV2025/html/Bose_Uncertainty-Aware_Diffusion-Guided_Refinement_of_3D_Scenes_ICCV_2025_paper.html" target="_blank">
         <papertitle>
-        <font size="3">Uncertainty Aware Diffusion Guided Refinement of 3D Scenes</font>
-        <font color="red"><strong>(NEW!)</strong></font>
+        <font size="3">UAR-Scenes: Uncertainty Aware Diffusion Guided Refinement of 3D Scenes</font>
         </papertitle>
         </a>
         <br><br>
@@ -349,7 +467,7 @@
         </font>
         <br>
         <font size="3">
-        <em>IEEE/CVF International Conference on Computer Vision
+        <em><strong>IEEE/CVF International Conference on Computer Vision</strong>
         (<strong>ICCV</strong>), 2025
         </em>
         </font>
@@ -421,7 +539,7 @@
         <table style="width:100%; border:0; border-spacing:0; border-collapse:separate;
         margin-right:auto; margin-left:auto; margin: 20px 0;">
         <tbody>
-        <tr onmouseout="iccv_voccl3d25_stop()" onmouseover="iccv_voccl3d25_start()" bgcolor="#ffffd0">
+        <tr onmouseout="iccv_voccl3d25_stop()" onmouseover="iccv_voccl3d25_start()" bgcolor="#ffffff">
         <!-- Left cell: VOccl3D image -->
         <td style="padding:20px;width:25%;vertical-align:middle">
         <div class="one">
@@ -449,7 +567,6 @@
         <a href="https://yashgarg98.github.io/VOccl3D-dataset/" target="_blank">
         <papertitle>
         <font size="3">VOccl3D: A Video Benchmark Dataset for 3D Human Pose and Shape Estimation under Occlusions</font>
-        <font color="red"><strong>(NEW!)</strong></font>
         </papertitle>
         </a>
         <br><br>
@@ -458,7 +575,7 @@
         </font>
         <br>
         <font size="3">
-        <em>IEEE/CVF International Conference on Computer Vision
+        <em><strong>IEEE/CVF International Conference on Computer Vision</strong>
         (<strong>ICCV</strong>), 2025
         </em>
         </font>
@@ -557,7 +674,7 @@
         </font>
         <br>
         <font size="3">
-        <em>IEEE/CVF Conference on Computer Vision and Pattern Recognition 
+        <em><strong>IEEE/CVF Conference on Computer Vision and Pattern Recognition</strong> 
         (<strong>CVPR</strong>)-ABAW, 2025
         </em>
         </font>
@@ -673,7 +790,7 @@
         </font>
         <br>
         <font size="3">
-        <em>IEEE/CVF Conference on Computer Vision and Pattern Recognition (<strong>CVPR</strong>), 2025</em>
+        <em><strong>IEEE/CVF Conference on Computer Vision and Pattern Recognition</strong> (<strong>CVPR</strong>), 2025</em>
         </font>
         <br><p></p>
 
@@ -733,7 +850,7 @@
           <tbody>
             <tr>
               <td style="padding:20px;width:100%;vertical-align:middle">
-                <heading><b>2023</b></heading>
+                <heading class="year-heading"><b>2023</b></heading>
               </td>
             </tr>
           </tbody>
@@ -785,8 +902,8 @@
         </font>
         <br>
         <font size="3">
-        <em>10th Springer International Conference on Pattern Recognition and 
-        Machine Intelligence (<strong>PReMI</strong>), 2023</em>
+        <em><strong>10th Springer International Conference on Pattern Recognition and 
+        Machine Intelligence</strong> (<strong>PReMI</strong>), 2023</em>
         </font>
         <br><p></p>
 
@@ -903,7 +1020,7 @@
                 </font>
                 <br>
                 <font size="3">
-                  <em><strong>MITACS</strong> Globalink Technical Report</em>
+                  <em><strong>MITACS Globalink Technical Report</strong></em>
                 </font>
                 <br><p></p>
 
@@ -993,8 +1110,8 @@
 
         <!-- Venue and year -->
         <font size="3">
-        <em>3rd International Conference on Computing, Communication, 
-        and Intelligent Systems (<strong>ICCCIS</strong>), 2022</em>
+        <em><strong>3rd International Conference on Computing, Communication, 
+        and Intelligent Systems</strong> (<strong>ICCCIS</strong>), 2022</em>
         </font>
         <br><p></p>
 
@@ -1082,7 +1199,7 @@
 
         <!-- Venue + year -->
         <font size="3">
-        <em>13th IEEE International Conference on Computing Communication and Networking Technologies 
+        <em><strong>13th IEEE International Conference on Computing Communication and Networking Technologies</strong> 
         (<strong>ICCCNT</strong>), 2022</em>
         </font>
         <br><p></p>
@@ -1131,7 +1248,7 @@
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
           <tr>
           <td style="padding:20px;width:100%;vertical-align:middle">
-            <heading><b>2021</b></heading>
+            <heading class="year-heading"><b>2021</b></heading>
             </td>
           </tr>
         </tbody></table>
@@ -1183,7 +1300,7 @@
 
         <!-- Venue + year -->
         <font size="3">
-        <em>18th IEEE India Council International Conference 
+        <em><strong>18th IEEE India Council International Conference</strong> 
         (<strong>INDICON</strong>), 2021</em>
         </font>
         <br><p></p>
@@ -1272,7 +1389,7 @@
 
         <!-- Venue + year -->
         <font size="3">
-        <em>8th IEEE Uttar Pradesh International Conference 
+        <em><strong>8th IEEE Uttar Pradesh International Conference</strong> 
         (<strong>UPCON</strong>), 2021</em>
         </font>
         <br><p></p>
@@ -1387,9 +1504,8 @@
             <td style="padding:20px;width:100%;vertical-align:middle">
               <heading>Misc</heading><br>
               <br>
-              <li> Served as a reviewer for <b>ICLR</b>, <b>IROS</b>, <b>ICRA</b>, <b>WACV</b>, <b>ICASSP</b> and <b>MLRC</b></li>
+              <li> Served as a reviewer for <b>CVPR</b>, <b>ICCV</b>, <b>ECCV</b>, <b>ICML</b>, <b>NeurIPS</b>, <b>ICLR</b>, <b>IROS</b>, <b>ICRA</b>, <b>WACV</b>, <b>TMI</b>, <b>ICASSP</b> and <b>MLRC</b>.</li>
               <li> My talks at the KyushuTech-CU joint symposium on Activity Recognition and 3D Convolution <a href="/files/talks/Kyushutech_presentation.pdf">here</a> and <a href="/files/talks/A General Overview of 3D Convolution .pdf">here</a></li>
-              <li> On popular request, I have put up the MITACS application process on a <a href="https://medium.com/@sarosij/my-mitacs-experience-part-1-712dbcf93b10">blog</a></li>
               <!-- <li> Our team <b>EcoGeeks</b> <a href="/files/University_of_Calcutta_Sarosij Bose_EcoGeeks_Mumbai.pdf">qualified</a> for the Hult 2021 Mumbai regionals. For context, only ~40 teams do so all over India</li> -->
               <!-- <li> A fun(!) <a href="https://stackoverflow.com/questions/65273118/why-is-tensorflow-not-recognizing-my-gpu-after-conda-install">bug</a> I found out in a faulty TF build during my freshman year</li> -->
               <li> My djikstra number is <a href="https://www.csauthors.net/sarosij-bose/">4</a></li>
@@ -1411,7 +1527,7 @@
           <tbody>
             <tr onmouseout="clipnerf_stop()" onmouseover="clipnerf_start()">
               <td style="padding:20px;width:25%;vertical-align:middle">
-                <p style="text-align:center;font-size:small;">  © Sarosij Bose (2023) <b>|</b> When in Rome, do as the <a href="https://jonbarron.info/">romans</a> do</p>
+                <p style="text-align:center;font-size:small;">  © Sarosij Bose (2026) <b>|</b> When in Rome, do as the <a href="https://jonbarron.info/">romans</a> do</p>
               </td>
             </tr>
           </tbody>

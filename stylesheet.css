@@ -178,12 +178,19 @@ strong {
 heading {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 22px;
+  color: #0e5f6f;
+  font-weight: 700;
+}
+
+heading.year-heading {
+  color: #8a5a2b;
 }
 
 papertitle {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 14px;
-  font-weight: 700
+  font-weight: 700;
+  color: #1f4ed8;
 }
 
 name {
@@ -206,6 +213,21 @@ name {
   -webkit-transition: opacity .2s ease-in-out;
 }
 
+.valor-one,
+.valor-two,
+.wide-thumb-one,
+.wide-thumb-two {
+  width: 190px;
+  height: 150px;
+}
+
+.valor-thumb,
+.wide-thumb {
+  width: 190px;
+  height: 150px;
+  object-fit: contain;
+}
+
 .fade {
   transition: opacity .2s ease-in-out;
   -moz-transition: opacity .2s ease-in-out;
@@ -220,10 +242,102 @@ span.highlight {
   width: 100%;
   padding: 20px;
   box-sizing: border-box;
+  background: #f5f6f8;
+  border-radius: 8px;
 }
 
 #news-section div {
   width: 100%;
   height: 250px;
   overflow-y: scroll;
+}
+
+.contact-links {
+  text-align: center;
+}
+
+.contact-links a,
+.pub-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.contact-icon,
+.pub-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.15em;
+  height: 1.15em;
+  color: #1772d0;
+  font-size: 0.95em;
+  font-weight: 700;
+}
+
+.contact-icon {
+  vertical-align: -0.12em;
+}
+
+.contact-icon svg,
+.pub-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.github-contact-icon {
+  color: #24292f;
+  transform: translateY(2px);
+}
+
+.pub-icon {
+  color: #f09228;
+}
+
+.pub-link[data-pub-label="abstract"] .pub-icon,
+.pub-link[data-pub-label="website"] .pub-icon {
+  color: #1772d0;
+}
+
+.pub-link[data-pub-label="arxiv"] .pub-icon {
+  color: #b31b1b;
+}
+
+.pub-link[data-pub-label="bibtex"] .pub-icon {
+  color: #6b4fbb;
+}
+
+.pub-link[data-pub-label="video"] .pub-icon {
+  color: #ff0000;
+}
+
+.pub-link[data-pub-label="code"] .pub-icon {
+  color: #24292f;
+}
+
+.pub-icon .ai-arxiv {
+  color: #b31b1b;
+  font-size: 1.15em;
+}
+
+.pub-link[href*="github"] .pub-icon {
+  color: #24292f;
+}
+
+.pub-link[href*="youtube"] .pub-icon,
+.pub-link[href*="youtu.be"] .pub-icon {
+  color: #ff0000;
+}
+
+.pub-link[href*="github"] .pub-icon,
+.pub-link[href*="youtube"] .pub-icon,
+.pub-link[href*="youtu.be"] .pub-icon,
+.pub-link[href*="sarosijbose.github.io"] .pub-icon,
+.pub-link[href*="github.io"] .pub-icon {
+  width: 1.25em;
+}
+
+.new-tag {
+  color: red;
+  font-weight: 700;
 }
