@@ -348,8 +348,10 @@ span.highlight {
 
 .amazon-news-logo {
   display: inline-block;
-  margin-left: 4px;
-  width: 18px;
-  height: 18px;
-  vertical-align: -0.25em;
+  margin-left: 5px;
+  width: 16px;
+  height: 16px;
+  max-width: 16px;
+  max-height: 16px;
+  vertical-align: -0.32em;
 }
