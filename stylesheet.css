@@ -190,6 +190,24 @@ heading.year-heading {
   color: #8a5a2b;
 }
 
+.section-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.35em;
+  margin-right: 8px;
+  font-size: 0.96em;
+  vertical-align: 0.02em;
+  filter: saturate(0.9);
+}
+
+.details-soon {
+  display: inline-block;
+  margin-top: 8px;
+  color: #8a5a2b;
+  font-weight: 700;
+}
+
 papertitle {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 14px;
@@ -220,15 +238,38 @@ name {
 .valor-one,
 .valor-two,
 .wide-thumb-one,
-.wide-thumb-two {
+.wide-thumb-two,
+.uar-thumb-one,
+.uar-thumb-two,
+.featured-thumb-one,
+.featured-thumb-two {
   width: 190px;
   height: 150px;
 }
 
+.featured-thumb-one,
+.featured-thumb-two {
+  width: 215px;
+  height: 165px;
+}
+
 .valor-thumb,
-.wide-thumb {
+.wide-thumb,
+.uar-thumb {
   width: 190px;
   height: 150px;
+  object-fit: contain;
+}
+
+.featured-thumb {
+  width: 215px;
+  height: 165px;
+  object-fit: contain;
+}
+
+.project-thumb-large {
+  width: 190px;
+  max-height: 150px;
   object-fit: contain;
 }
 
@@ -283,6 +324,11 @@ span.highlight {
   vertical-align: -0.12em;
 }
 
+.email-contact-icon {
+  color: #0e5f6f;
+  transform: translateY(1px);
+}
+
 .contact-icon svg,
 .pub-icon svg {
   width: 100%;
@@ -292,6 +338,73 @@ span.highlight {
 .github-contact-icon {
   color: #24292f;
   transform: translateY(2px);
+}
+
+.affiliation-strip {
+  width: 96%;
+  margin: 8px auto 12px;
+  border-top: 1px solid rgba(14, 95, 111, 0.18);
+  border-bottom: 1px solid rgba(14, 95, 111, 0.18);
+}
+
+.affiliation-strip td {
+  padding-top: 12px;
+  padding-bottom: 10px;
+}
+
+.affiliation-strip .affiliation-cell-amazon {
+  padding-right: 0;
+}
+
+.affiliation-strip .affiliation-cell-nec {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.affiliation-strip .affiliation-cell-ucr {
+  padding-left: 0;
+}
+
+.affiliation-strip a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 72px;
+}
+
+.affiliation-strip img {
+  max-width: 116px;
+  max-height: 60px;
+  object-fit: contain;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.affiliation-strip .affiliation-logo-nec {
+  max-width: 160px;
+  max-height: 78px;
+}
+
+.affiliation-strip .affiliation-logo-smu {
+  max-width: 118px;
+  max-height: 66px;
+}
+
+.affiliation-strip .affiliation-logo-amazon {
+  max-width: 104px;
+  max-height: 62px;
+}
+
+.affiliation-strip a:hover img {
+  transform: translateY(-1px);
+  opacity: 0.88;
+}
+
+.affiliation-caption {
+  margin-top: 6px;
+  color: #6f7177;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.1;
 }
 
 .pub-icon {
@@ -311,6 +424,11 @@ span.highlight {
   color: #6b4fbb;
 }
 
+.pub-link-disabled {
+  color: #8c8c8c;
+  cursor: default;
+}
+
 .pub-link[data-pub-label="video"] .pub-icon {
   color: #ff0000;
 }
@@ -322,6 +440,11 @@ span.highlight {
 .pub-icon .ai-arxiv {
   color: #b31b1b;
   font-size: 1.15em;
+}
+
+.pub-link-disabled .pub-icon,
+.pub-link-disabled .pub-icon .ai-arxiv {
+  color: #8c8c8c;
 }
 
 .pub-link[href*="github"] .pub-icon {
