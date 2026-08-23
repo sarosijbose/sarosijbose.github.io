@@ -10,10 +10,25 @@
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
   <!-- <script defer src="js/toggle.js"></script> -->
   <link rel="icon" type="image/png" href="images/website_dp_circle.png">
+  <script>
+    (function() {
+      try {
+        const savedTheme = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+          document.documentElement.classList.add('dark-mode');
+        }
+      } catch (error) {}
+    })();
+  </script>
   <script src="js/scramble.js"></script>
 </head>
 
 <body>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode" aria-pressed="false">
+    <span class="theme-toggle-icon theme-toggle-sun" aria-hidden="true">☀️</span>
+    <span class="theme-toggle-icon theme-toggle-moon" aria-hidden="true">🌙</span>
+  </button>
 
   <!-- <div class="container"> <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse text-right" id="navbarNav"> <ul class="navbar-nav ml-auto flex-nowrap"></li><li class="toggle-container"> <button id="light-toggle" title="Change theme"> <i class="fas fa-moon"></i> <i class="fas fa-sun"></i> </button> </li> </ul> </div> </div> -->
 
@@ -1644,6 +1659,28 @@
     </tr>
   </table>
 
+<script>
+  (function() {
+    const toggle = document.querySelector('.theme-toggle');
+    if (!toggle) return;
+
+    function syncToggle() {
+      const isDark = document.documentElement.classList.contains('dark-mode');
+      toggle.setAttribute('aria-pressed', isDark ? 'true' : 'false');
+      toggle.title = isDark ? 'Switch to light mode' : 'Switch to dark mode';
+    }
+
+    toggle.addEventListener('click', function() {
+      const isDark = document.documentElement.classList.toggle('dark-mode');
+      try {
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      } catch (error) {}
+      syncToggle();
+    });
+
+    syncToggle();
+  })();
+</script>
 
 </body>
 

@@ -84,6 +84,7 @@ root {
 body {
     background-color: var(--background-color);
     color: var(--text-color);
+    transition: background-color 0.18s ease, color 0.18s ease;
 }
   
 h1 {
@@ -92,6 +93,66 @@ h1 {
   
 a {
     color: var(--primary-color);
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 18px;
+  right: 18px;
+  z-index: 20;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 56px;
+  height: 30px;
+  padding: 3px;
+  border: 1px solid rgba(14, 95, 111, 0.25);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  color: #0e5f6f;
+  box-shadow: 0 4px 14px rgba(20, 31, 45, 0.12);
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  transition: background-color 0.18s ease, border-color 0.18s ease, transform 0.18s ease;
+}
+
+.theme-toggle:hover {
+  transform: translateY(-1px);
+  border-color: rgba(14, 95, 111, 0.42);
+}
+
+.theme-toggle::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #f09228;
+  box-shadow: 0 2px 6px rgba(20, 31, 45, 0.18);
+  transition: transform 0.18s ease, background-color 0.18s ease;
+}
+
+.theme-toggle-icon {
+  position: relative;
+  z-index: 1;
+  width: 22px;
+  text-align: center;
+  font-size: 13px;
+  line-height: 1;
+}
+
+html.dark-mode .theme-toggle {
+  background: rgba(31, 36, 48, 0.92);
+  border-color: rgba(125, 211, 231, 0.28);
+  color: #d8eef5;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.28);
+}
+
+html.dark-mode .theme-toggle::after {
+  transform: translateX(26px);
+  background: #79d5e7;
 }
   
 /* Slider styling */
@@ -477,4 +538,87 @@ span.highlight {
   max-width: 42px;
   max-height: 16px;
   vertical-align: -0.28em;
+}
+
+html.dark-mode {
+  --primary-color: #8bc5ff;
+  --secondary-color: #9db7ca;
+  --text-color: #d8dee9;
+  --background-color: #11151d;
+  --heading-color: #9bdbe8;
+}
+
+html.dark-mode body {
+  background: #11151d;
+  color: #d8dee9;
+}
+
+html.dark-mode a {
+  color: #8bc5ff;
+}
+
+html.dark-mode a:hover,
+html.dark-mode a:focus {
+  color: #ffb35c;
+}
+
+html.dark-mode heading {
+  color: #8dd7e6;
+}
+
+html.dark-mode heading.year-heading {
+  color: #d7a46a;
+}
+
+html.dark-mode papertitle {
+  color: #9db8ff;
+}
+
+html.dark-mode strong {
+  color: #f0f4f8;
+}
+
+html.dark-mode #news-section {
+  background: #1a202b;
+}
+
+html.dark-mode .affiliation-strip {
+  border-top-color: rgba(141, 215, 230, 0.22);
+  border-bottom-color: rgba(141, 215, 230, 0.22);
+}
+
+html.dark-mode .affiliation-caption {
+  color: #aeb8c5;
+}
+
+html.dark-mode tr[bgcolor="#ffffff"] {
+  background-color: #171c25 !important;
+}
+
+html.dark-mode tr[bgcolor="#ffffd0"] {
+  background-color: #2a2b1d !important;
+}
+
+html.dark-mode .details-soon {
+  color: #d7a46a;
+}
+
+html.dark-mode .pub-link-disabled,
+html.dark-mode .pub-link-disabled .pub-icon,
+html.dark-mode .pub-link-disabled .pub-icon .ai-arxiv {
+  color: #8f98a6;
+}
+
+html.dark-mode .email-contact-icon,
+html.dark-mode .contact-icon,
+html.dark-mode .pub-icon {
+  color: #8bc5ff;
+}
+
+html.dark-mode .github-contact-icon {
+  color: #d8dee9;
+}
+
+html.dark-mode .new-tag {
+  color: #ff6b6b;
 }
