@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css?v=20260823-theme">
   <!-- <script defer src="js/toggle.js"></script> -->
   <link rel="icon" type="image/png" href="images/website_dp_circle.png">
   <script>
@@ -1668,6 +1668,7 @@
       const isDark = document.documentElement.classList.contains('dark-mode');
       toggle.setAttribute('aria-pressed', isDark ? 'true' : 'false');
       toggle.title = isDark ? 'Switch to light mode' : 'Switch to dark mode';
+      toggle.dataset.mode = isDark ? 'dark' : 'light';
     }
 
     toggle.addEventListener('click', function() {
