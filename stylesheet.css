@@ -316,6 +316,12 @@ name {
   height: 165px;
 }
 
+.soccer-thumb-one,
+.soccer-thumb-two {
+  width: 240px;
+  height: 135px;
+}
+
 .valor-thumb,
 .wide-thumb,
 .uar-thumb {
@@ -327,6 +333,12 @@ name {
 .featured-thumb {
   width: 215px;
   height: 165px;
+  object-fit: contain;
+}
+
+.soccer-thumb {
+  width: 240px;
+  height: 135px;
   object-fit: contain;
 }
 
