@@ -285,6 +285,8 @@ name {
   width: 160px;
   height: 160px;
   position: relative;
+  overflow: hidden;
+  border-radius: 6px;
 }
 
 .two {
@@ -334,6 +336,20 @@ name {
   object-fit: contain;
 }
 
+.hoverZoomLink,
+.one img,
+.project-thumb-large {
+  transition: transform 0.22s ease, filter 0.22s ease;
+  transform-origin: center center;
+}
+
+.hoverZoomLink:hover,
+.one:hover img,
+.project-thumb-large:hover {
+  transform: scale(1.045);
+  filter: saturate(1.04);
+}
+
 .fade {
   transition: opacity .2s ease-in-out;
   -moz-transition: opacity .2s ease-in-out;
@@ -367,6 +383,10 @@ span.highlight {
   display: inline-flex;
   align-items: center;
   gap: 4px;
+}
+
+.contact-link-adjust {
+  transform: translateY(2px);
 }
 
 .contact-icon,
