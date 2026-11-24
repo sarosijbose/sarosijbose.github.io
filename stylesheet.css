@@ -861,15 +861,33 @@ html.dark-mode .new-tag {
      create a horizontal scrollbar at narrow desktop widths.
    - .one clips its crossfade pair with overflow:hidden, so that clipping is
      lifted on hover or the zoom would be cut off.
-   - The RecallWorld comparison stage is excluded: it relies on overflow:hidden
-     for its quadrant split and is interactive, so scaling it would break both.
+   - z-index and background-color are NOT smoothly animatable, so on mouse-out
+     they would revert the instant hover is lost, while the thumbnail is still
+     scaled ~1.9x. The enlarged, now-transparent image then renders behind the
+     text column for the first ~150ms of the collapse, which reads as a flicker.
+     Both are therefore given a 0s transition delayed by the full shrink
+     duration on the resting rule (which governs leaving), and no delay on the
+     :hover rule (which governs entering) - so they snap on immediately but
+     only release once the thumbnail is back to its normal size.
    - Disabled for touch pointers, narrow viewports and reduced-motion users.
    --------------------------------------------------------------------------- */
 @media (hover: hover) and (pointer: fine) and (min-width: 961px) {
   .publication-table td img,
   .publication-table td video:not([class^="quad-"]) {
     position: relative;
-    transition: transform .35s ease, box-shadow .35s ease;
+    /* A numeric resting z-index is required: `auto` is not interpolable, so a
+       transition involving it is dropped entirely and the delay below would be
+       ignored. 1 is inert here - it only lifts the thumbnail above
+       non-positioned content inside the same cell. */
+    z-index: 1;
+    transition: transform .35s ease, box-shadow .35s ease,
+                z-index 0s linear .35s, background-color 0s linear .35s;
+  }
+
+  .publication-table td:hover img,
+  .publication-table td:hover video:not([class^="quad-"]) {
+    transition: transform .35s ease, box-shadow .35s ease,
+                z-index 0s linear 0s, background-color 0s linear 0s;
   }
 
   .publication-table td:hover .one {
@@ -913,10 +931,14 @@ html.dark-mode .new-tag {
      percentage math is unchanged. The stage already has an opaque background,
      so it needs no backdrop of its own. */
   .recallworld-preview .quad-stage {
-    transition: transform .35s ease, box-shadow .35s ease;
+    z-index: 1;
+    transition: transform .35s ease, box-shadow .35s ease,
+                z-index 0s linear .35s;
   }
 
   .publication-table td:hover .recallworld-preview .quad-stage {
+    transition: transform .35s ease, box-shadow .35s ease,
+                z-index 0s linear 0s;
     transform: scale(2);
     transform-origin: left center;
     z-index: 1000;
