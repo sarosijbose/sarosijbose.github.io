@@ -546,11 +546,15 @@ button:focus-visible {
   transform-origin: center center;
 }
 
-.hoverZoomLink:hover,
-.one:hover img,
-.project-thumb-large:hover {
-  transform: scale(1.045);
-  filter: saturate(1.04);
+/* Gated to real hover pointers: on a touch screen :hover latches after a tap
+   and leaves the thumbnail stuck at 1.045. */
+@media (hover: hover) and (pointer: fine) {
+  .hoverZoomLink:hover,
+  .one:hover img,
+  .project-thumb-large:hover {
+    transform: scale(1.045);
+    filter: saturate(1.04);
+  }
 }
 
 .fade {
@@ -901,12 +905,26 @@ html.dark-mode .new-tag {
     background-color: #2a2b1d;
   }
 
-  /* Never zoom or restack the RecallWorld quadrant comparison. */
-  .recallworld-preview .quad-stage,
-  .recallworld-preview .quad-stage video {
-    transform: none !important;
-    z-index: auto !important;
-    box-shadow: none !important;
+  /* The RecallWorld comparison zooms as a single unit: the transform goes on
+     the stage, never on the four quadrant videos. Scaling the videos
+     individually would break the quadrant clipping, whereas scaling their
+     container keeps the split intact. The drag divider still works because
+     getBoundingClientRect() reports the transformed box, so the divider's
+     percentage math is unchanged. The stage already has an opaque background,
+     so it needs no backdrop of its own. */
+  .recallworld-preview .quad-stage {
+    transition: transform .35s ease, box-shadow .35s ease;
+  }
+
+  .publication-table td:hover .recallworld-preview .quad-stage {
+    transform: scale(2);
+    transform-origin: left center;
+    z-index: 1000;
+    box-shadow: 0 6px 22px rgba(0, 0, 0, .22);
+  }
+
+  html.dark-mode .publication-table td:hover .recallworld-preview .quad-stage {
+    box-shadow: 0 6px 22px rgba(0, 0, 0, .55);
   }
 }
 
