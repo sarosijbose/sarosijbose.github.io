@@ -1,69 +1,77 @@
 /* latin-ext */
 @font-face {
   font-family: 'Lato';
+  font-display: swap;
   font-style: italic;
   font-weight: 400;
-  src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v15/S6u8w4BMUTPHjxsAUi-qNiXg7eU0.woff2) format('woff2');
+  src: local('Lato Italic'), local('Lato-Italic'), url(fonts/lato-italic-400-latin-ext.woff2) format('woff2');
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 /* latin */
 @font-face {
   font-family: 'Lato';
+  font-display: swap;
   font-style: italic;
   font-weight: 400;
-  src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v15/S6u8w4BMUTPHjxsAXC-qNiXg7Q.woff2) format('woff2');
+  src: local('Lato Italic'), local('Lato-Italic'), url(fonts/lato-italic-400-latin.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 /* latin-ext */
 @font-face {
   font-family: 'Lato';
+  font-display: swap;
   font-style: italic;
   font-weight: 700;
-  src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v15/S6u_w4BMUTPHjxsI5wq_FQftx9897sxZ.woff2) format('woff2');
+  src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(fonts/lato-italic-700-latin-ext.woff2) format('woff2');
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 /* latin */
 @font-face {
   font-family: 'Lato';
+  font-display: swap;
   font-style: italic;
   font-weight: 700;
-  src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v15/S6u_w4BMUTPHjxsI5wq_Gwftx9897g.woff2) format('woff2');
+  src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(fonts/lato-italic-700-latin.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 /* latin-ext */
 @font-face {
   font-family: 'Lato';
+  font-display: swap;
   font-style: normal;
   font-weight: 400;
-  src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v15/S6uyw4BMUTPHjxAwXiWtFCfQ7A.woff2) format('woff2');
+  src: local('Lato Regular'), local('Lato-Regular'), url(fonts/lato-normal-400-latin-ext.woff2) format('woff2');
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 /* latin */
 @font-face {
   font-family: 'Lato';
+  font-display: swap;
   font-style: normal;
   font-weight: 400;
-  src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v15/S6uyw4BMUTPHjx4wXiWtFCc.woff2) format('woff2');
+  src: local('Lato Regular'), local('Lato-Regular'), url(fonts/lato-normal-400-latin.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 /* latin-ext */
 @font-face {
   font-family: 'Lato';
+  font-display: swap;
   font-style: normal;
   font-weight: 700;
-  src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v15/S6u9w4BMUTPHh6UVSwaPGQ3q5d0N7w.woff2) format('woff2');
+  src: local('Lato Bold'), local('Lato-Bold'), url(fonts/lato-normal-700-latin-ext.woff2) format('woff2');
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 /* latin */
 @font-face {
   font-family: 'Lato';
+  font-display: swap;
   font-style: normal;
   font-weight: 700;
-  src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v15/S6u9w4BMUTPHh6UVSwiPGQ3q5d0.woff2) format('woff2');
+  src: local('Lato Bold'), local('Lato-Bold'), url(fonts/lato-normal-700-latin.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
-root {
+:root {
   --primary-color: #302AE6;
   --secondary-color: #536390;
   --text-color: #424242;
@@ -71,7 +79,6 @@ root {
   --heading-color: #292922;
 }
 
-* Dark theme */
 [theme="dark"] {
     --primary-color: #9A97F3;
     --secondary-color: #818cab;
@@ -240,14 +247,16 @@ strong {
   font-size: 16px;
 }
 
-heading {
+.section-heading {
+  display: inline;
+  margin: 0;
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 22px;
   color: #0e5f6f;
   font-weight: 700;
 }
 
-heading.year-heading {
+.section-heading.year-heading {
   color: #8a5a2b;
 }
 
@@ -276,9 +285,101 @@ papertitle {
   color: #1f4ed8;
 }
 
-name {
+.profile-name {
+  display: block;
+  text-align: center;
+  margin: 0;
+  color: inherit;
+  font-weight: 400;
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 32px;
+}
+
+#main-content img {
+  max-width: 100%;
+}
+
+#main-content pre {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #1772d0;
+  outline-offset: 3px;
+}
+
+@media (max-width: 800px) {
+  .profile-table > tbody > tr {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .profile-table > tbody > tr > td,
+  .publication-table > tbody > tr > td {
+    display: block;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 16px !important;
+    box-sizing: border-box;
+    overflow-wrap: anywhere;
+  }
+
+  .profile-table > tbody > tr > td:last-child {
+    text-align: center;
+  }
+
+  .profile-table img {
+    max-width: 220px !important;
+  }
+
+  .publication-table > tbody > tr {
+    display: block;
+  }
+
+  .publication-table .one,
+  .publication-table .recallworld-preview {
+    margin-inline: auto;
+  }
+
+  .publication-table > tbody > tr > td:first-child {
+    padding-bottom: 0 !important;
+    text-align: center;
+  }
+
+  .affiliation-strip > tbody > tr {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .affiliation-strip td {
+    width: 33.333%;
+    padding-inline: 8px !important;
+    box-sizing: border-box;
+  }
+
+  .affiliation-strip img {
+    max-width: 100% !important;
+    max-height: 60px !important;
+  }
+
+  .contact-links {
+    line-height: 2;
+  }
+
+  .pub-link {
+    padding-block: 6px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+  }
 }
 
 .one {
@@ -335,6 +436,95 @@ name {
   height: 165px;
   object-fit: contain;
 }
+
+.recallworld-preview {
+  width: 215px;
+  min-height: 165px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.recallworld-preview .quad-stage {
+  --split-x: 50%;
+  --split-y: 50%;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 640 / 352;
+  overflow: hidden;
+  border-radius: 6px;
+  background: #111;
+  touch-action: pan-y;
+  cursor: crosshair;
+}
+
+.recallworld-preview video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.recallworld-preview .quad-tl { clip-path: inset(0 calc(100% - var(--split-x)) calc(100% - var(--split-y)) 0); }
+.recallworld-preview .quad-tr { clip-path: inset(0 0 calc(100% - var(--split-y)) var(--split-x)); }
+.recallworld-preview .quad-bl { clip-path: inset(var(--split-y) calc(100% - var(--split-x)) 0 0); }
+.recallworld-preview .quad-br { clip-path: inset(var(--split-y) 0 0 var(--split-x)); }
+
+.recallworld-preview .quad-label {
+  position: absolute;
+  z-index: 2;
+  padding: 3px;
+  border-radius: 3px;
+  color: #fff;
+  background: #111c;
+  font-size: 8px;
+  line-height: 1.2;
+  text-align: center;
+  pointer-events: none;
+}
+
+.recallworld-preview .quad-label-tl { left: 4px; top: 4px; background: #941f30ed; }
+.recallworld-preview .quad-label-tr { right: 4px; top: 4px; }
+.recallworld-preview .quad-label-bl { left: 4px; bottom: 4px; }
+.recallworld-preview .quad-label-br { right: 4px; bottom: 4px; }
+.recallworld-preview .quad-metrics { display: block; margin-top: 2px; }
+
+.recallworld-preview .quad-line {
+  position: absolute;
+  z-index: 3;
+  background: #fff;
+  pointer-events: none;
+}
+
+.recallworld-preview .quad-line-x { left: var(--split-x); top: 0; bottom: 0; width: 1px; }
+.recallworld-preview .quad-line-y { top: var(--split-y); left: 0; right: 0; height: 1px; }
+
+.recallworld-preview .quad-handle {
+  position: absolute;
+  left: var(--split-x);
+  top: var(--split-y);
+  transform: translate(-50%, -50%);
+  z-index: 4;
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  background: #fffffff2;
+  color: #32323c;
+  cursor: move;
+  touch-action: none;
+}
+
+.recallworld-preview .quad-handle svg { width: 20px; height: 20px; }
+.recallworld-preview .quad-handle:focus-visible { outline: 2px solid #e66983; outline-offset: 2px; }
+.recallworld-preview .quad-stage.is-dragging { touch-action: none; }
+.recallworld-preview .quad-status { font-size: 11px; text-align: center; }
 
 .soccer-thumb {
   width: 215px;
@@ -595,11 +785,11 @@ html.dark-mode a:focus {
   color: #ffb35c;
 }
 
-html.dark-mode heading {
+html.dark-mode .section-heading {
   color: #8dd7e6;
 }
 
-html.dark-mode heading.year-heading {
+html.dark-mode .section-heading.year-heading {
   color: #d7a46a;
 }
 
@@ -654,4 +844,80 @@ html.dark-mode .github-contact-icon {
 
 html.dark-mode .new-tag {
   color: #ff6b6b;
+}
+
+/* ---------------------------------------------------------------------------
+   Hover zoom on publication thumbnails.
+
+   Container-hover pattern: hovering the thumbnail cell scales its media. Set to
+   2x, roughly half the magnification of the reference implementation (3-4x).
+
+   - transform-origin is left-centre so the thumbnail grows rightward over the
+     text column and never past the page's left edge, which would otherwise
+     create a horizontal scrollbar at narrow desktop widths.
+   - .one clips its crossfade pair with overflow:hidden, so that clipping is
+     lifted on hover or the zoom would be cut off.
+   - The RecallWorld comparison stage is excluded: it relies on overflow:hidden
+     for its quadrant split and is interactive, so scaling it would break both.
+   - Disabled for touch pointers, narrow viewports and reduced-motion users.
+   --------------------------------------------------------------------------- */
+@media (hover: hover) and (pointer: fine) and (min-width: 961px) {
+  .publication-table td img,
+  .publication-table td video:not([class^="quad-"]) {
+    position: relative;
+    transition: transform .35s ease, box-shadow .35s ease;
+  }
+
+  .publication-table td:hover .one {
+    overflow: visible;
+  }
+
+  .publication-table td:hover img,
+  .publication-table td:hover video:not([class^="quad-"]) {
+    transform: scale(2);
+    transform-origin: left center;
+    z-index: 1000;
+    border-radius: 6px;
+    box-shadow: 0 6px 22px rgba(0, 0, 0, .22);
+    /* Most thumbnails carry an alpha channel (valor.webp is 85% non-opaque),
+       so without an opaque backdrop the zoomed image shows the text column
+       straight through it. Painted to match the row it sits on. */
+    background-color: #ffffff;
+  }
+
+  .publication-table tr[bgcolor="#ffffd0"] td:hover img,
+  .publication-table tr[bgcolor="#ffffd0"] td:hover video:not([class^="quad-"]) {
+    background-color: #ffffd0;
+  }
+
+  html.dark-mode .publication-table td:hover img,
+  html.dark-mode .publication-table td:hover video:not([class^="quad-"]) {
+    background-color: #171c25;
+    box-shadow: 0 6px 22px rgba(0, 0, 0, .55);
+  }
+
+  html.dark-mode .publication-table tr[bgcolor="#ffffd0"] td:hover img,
+  html.dark-mode .publication-table tr[bgcolor="#ffffd0"] td:hover video:not([class^="quad-"]) {
+    background-color: #2a2b1d;
+  }
+
+  /* Never zoom or restack the RecallWorld quadrant comparison. */
+  .recallworld-preview .quad-stage,
+  .recallworld-preview .quad-stage video {
+    transform: none !important;
+    z-index: auto !important;
+    box-shadow: none !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .publication-table td img,
+  .publication-table td video {
+    transition: none !important;
+  }
+
+  .publication-table td:hover img,
+  .publication-table td:hover video {
+    transform: none !important;
+  }
 }

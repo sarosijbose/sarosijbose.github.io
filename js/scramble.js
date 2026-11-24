@@ -80,4 +80,4 @@ function switchTheme(e) {
 	}
 }
 
-toggleSwitch.addEventListener('change', switchTheme, false);
+if (toggleSwitch) toggleSwitch.addEventListener('change', switchTheme, false);
