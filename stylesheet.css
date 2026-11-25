@@ -526,6 +526,23 @@ button:focus-visible {
 .recallworld-preview .quad-stage.is-dragging { touch-action: none; }
 .recallworld-preview .quad-status { font-size: 11px; text-align: center; }
 
+/* Teaser-video thumbnails (RecallWorld, DreamTour), styled after the reference
+   site's video thumbnails: contained, rounded, softly raised. Sized to match
+   the 215px publication thumbnails; height comes from the width/height
+   attributes so the box is reserved before the video loads. */
+.teaser-thumb {
+  display: block;
+  width: 215px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, .12);
+}
+
+html.dark-mode .teaser-thumb {
+  box-shadow: 0 4px 14px rgba(0, 0, 0, .45);
+}
+
 .soccer-thumb {
   width: 215px;
   height: 135px;
