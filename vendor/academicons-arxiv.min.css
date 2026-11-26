@@ -1,8 +1,0 @@
-/*! Academicons, subset to the only icon this site uses: ai-arxiv (U+E974).
- *  Upstream build ships 146 icon rules + a 131 KB webfont; this ships 1 rule
- *  and a 1.1 KB woff2. Source font kept at fonts/academicons.woff.
- *  Regenerate after adding any new ai-* icon: tools/build-webfonts.sh
- *  Academicons by James Walsh, SIL OFL 1.1 - see LICENSE-academicons.txt */
-@font-face{font-family:'Academicons';font-style:normal;font-weight:400;font-display:swap;src:url('../fonts/academicons-arxiv.woff2') format('woff2')}
-.ai{font-family:'Academicons';font-weight:400;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;display:inline-block;font-style:normal;font-variant:normal;text-rendering:auto;line-height:1}
-.ai-arxiv:before{content:"\e974"}

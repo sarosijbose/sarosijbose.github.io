@@ -102,10 +102,13 @@ a {
     color: var(--primary-color);
 }
 
+/* Lives inside the sticky section nav and is centred against it, so it stays
+   level with the nav's rule instead of hanging below it. */
 .theme-toggle {
-  position: fixed;
-  top: 18px;
-  right: 18px;
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
   z-index: 20;
   display: inline-flex;
   align-items: center;
@@ -124,7 +127,8 @@ a {
 }
 
 .theme-toggle:hover {
-  transform: translateY(-1px);
+  /* Keep the -50% centring; the extra 1px is the usual hover lift. */
+  transform: translateY(calc(-50% - 1px));
   border-color: rgba(14, 95, 111, 0.42);
 }
 
@@ -148,6 +152,15 @@ a {
   text-align: center;
   font-size: 13px;
   line-height: 1;
+}
+
+/* The sun/moon marks are inline SVG, so they need explicit sizing rather than
+   inheriting a text font-size as the previous emoji did. */
+.theme-toggle-icon svg {
+  display: block;
+  width: 13px;
+  height: 13px;
+  margin: 0 auto;
 }
 
 html.dark-mode .theme-toggle {
@@ -526,10 +539,10 @@ button:focus-visible {
 .recallworld-preview .quad-stage.is-dragging { touch-action: none; }
 .recallworld-preview .quad-status { font-size: 11px; text-align: center; }
 
-/* Teaser-video thumbnails (RecallWorld, DreamTour), styled after the reference
-   site's video thumbnails: contained, rounded, softly raised. Sized to match
-   the 215px publication thumbnails; height comes from the width/height
-   attributes so the box is reserved before the video loads. */
+/* Teaser-video thumbnails (RecallWorld, DreamTour): contained, rounded and
+   softly raised. Sized to match the 215px publication thumbnails; height comes
+   from the width/height attributes so the box is reserved before the video
+   loads. */
 .teaser-thumb {
   display: block;
   width: 215px;
@@ -645,6 +658,118 @@ span.highlight {
   transform: translateY(2px);
 }
 
+/* Sticky section nav. The right padding keeps the links clear of the fixed
+   theme toggle (56px wide at right:18px). Targets get scroll-margin-top so an
+   anchor jump does not land underneath the bar. */
+.section-nav {
+  position: sticky;
+  top: 0;
+  z-index: 15;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 18px;
+  justify-content: center;
+  padding: 10px 90px 10px 16px;
+  border-bottom: 1px solid rgba(14, 95, 111, 0.14);
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(8px);
+  font-size: 14px;
+}
+
+.section-nav a {
+  color: #0e5f6f;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.section-nav a:hover,
+.section-nav a:focus-visible {
+  text-decoration: underline;
+}
+
+.section-heading[id] {
+  scroll-margin-top: 64px;
+}
+
+html.dark-mode .section-nav {
+  border-bottom-color: rgba(125, 211, 231, 0.2);
+  background: rgba(16, 20, 28, 0.88);
+}
+
+html.dark-mode .section-nav a {
+  color: #8bc5ff;
+}
+
+@media (max-width: 600px) {
+  .section-nav {
+    gap: 2px 12px;
+    padding: 8px 76px 8px 12px;
+    font-size: 13px;
+  }
+
+  .theme-toggle {
+    right: 12px;
+  }
+}
+
+/* Skip link: visually hidden until focused, then pinned to the top-left so a
+   keyboard user can bypass the header's tab stops. Not display:none, which
+   would remove it from the tab order entirely. */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+  padding: 10px 16px;
+  border-radius: 0 0 6px 0;
+  background: #0e5f6f;
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  left: 0;
+}
+
+html.dark-mode .skip-link {
+  background: #79d5e7;
+  color: #10141c;
+}
+
+/* Footer "Back to top" link and its target. The anchor is pinned to the very
+   top of the document and given no size, so it takes up no layout space and
+   the jump lands at 0 rather than below the body's default margin. */
+#top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.back-to-top {
+  white-space: nowrap;
+}
+
+/* Smooth in-page scrolling, skipped for readers who ask for reduced motion. */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Google Scholar mark, rendered from the Academicons subset in its brand blue. */
+.scholar-contact-icon {
+  color: #4285f4;
+}
+
+.scholar-contact-icon .ai-google-scholar {
+  font-size: 1.1em;
+}
+
 .affiliation-strip {
   width: 96%;
   margin: 8px auto 12px;
@@ -717,7 +842,8 @@ span.highlight {
 }
 
 .pub-link[data-pub-label="abstract"] .pub-icon,
-.pub-link[data-pub-label="website"] .pub-icon {
+.pub-link[data-pub-label="website"] .pub-icon,
+.pub-link[data-pub-label="project page"] .pub-icon {
   color: #1772d0;
 }
 
@@ -863,6 +989,10 @@ html.dark-mode .github-contact-icon {
   color: #d8dee9;
 }
 
+html.dark-mode .scholar-contact-icon {
+  color: #8ab4f8;
+}
+
 html.dark-mode .new-tag {
   color: #ff6b6b;
 }
@@ -871,7 +1001,8 @@ html.dark-mode .new-tag {
    Hover zoom on publication thumbnails.
 
    Container-hover pattern: hovering the thumbnail cell scales its media. Set to
-   2x, roughly half the magnification of the reference implementation (3-4x).
+   2x, a deliberately restrained magnification that keeps the enlarged
+   thumbnail inside the page's own column width.
 
    - transform-origin is left-centre so the thumbnail grows rightward over the
      text column and never past the page's left edge, which would otherwise

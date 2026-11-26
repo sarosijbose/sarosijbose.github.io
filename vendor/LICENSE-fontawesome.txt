@@ -1,0 +1,14 @@
+Font Awesome Free 6.7.2
+https://fontawesome.com
+
+Icons used on this site are inlined as SVG path data rather than loaded from the
+Font Awesome webfont or CDN, so no Font Awesome CSS or font file is shipped.
+
+Icons in use (all from the Free set):
+  regular/file-lines   -> publication "Abstract" links
+  solid/globe          -> publication "Project Page" links
+  solid/quote-left     -> publication "BibTeX" links
+  regular/envelope     -> contact email link
+
+Icons: CC BY 4.0 License (https://creativecommons.org/licenses/by/4.0/)
+Attribution is provided by this notice.

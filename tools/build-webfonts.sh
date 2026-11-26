@@ -16,8 +16,8 @@ cd "$(dirname "$0")/.."
 
 SRC_FONT="fonts/academicons.woff"
 SRC_CSS="vendor/academicons.min.css"
-OUT_FONT="fonts/academicons-arxiv.woff2"
-OUT_CSS="vendor/academicons-arxiv.min.css"
+OUT_FONT="fonts/academicons-subset.woff2"
+OUT_CSS="vendor/academicons-subset.min.css"
 
 [[ -f "$SRC_FONT" ]] || { echo "ERROR: missing source font $SRC_FONT" >&2; exit 1; }
 [[ -f "$SRC_CSS" ]]  || { echo "ERROR: missing source CSS $SRC_CSS" >&2; exit 1; }
